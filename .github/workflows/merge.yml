@@ -13,17 +13,18 @@ on:
       - 'merge_rules.py'
       - 'config_loader.py'
       - 'requirements.txt'
+      - '.github/workflows/**'
 
 permissions:
   contents: write
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: 'pip'
@@ -34,17 +35,17 @@ jobs:
 
   merge:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: 'pip'
@@ -58,7 +59,7 @@ jobs:
         run: python merge_rules.py validate config/sources.yaml
 
       - name: Restore rule cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: cache/
           key: rule-cache-v5-${{ github.run_id }}
@@ -72,15 +73,24 @@ jobs:
           echo "::endgroup::"
 
       - name: Save rule cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: cache/
           key: rule-cache-v5-${{ github.run_id }}
+
+      - name: Verify output
+        run: |
+          echo "Output files:"
+          ls -la output/ 2>/dev/null || echo "ERROR: output/ directory missing!"
+          test -f output/merged_rules.txt || (echo "ERROR: merged_rules.txt not found" && exit 1)
+          echo "merged_rules.txt lines: $(wc -l < output/merged_rules.txt)"
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # -f required because output/ is in .gitignore (local dev ignores it,
+          # but CI must commit the generated rules).
           git add -f output/
           # Only commit when output actually changed; never empty-commit.
           if git diff --cached --quiet; then
@@ -93,7 +103,7 @@ jobs:
           fi
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: merged-rules-v5
           path: output/
