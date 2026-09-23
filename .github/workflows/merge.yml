@@ -1,0 +1,100 @@
+name: Merge Rules (V5)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'config/**'
+      - 'merger/**'
+      - 'tests/**'
+      - 'merge_rules.py'
+      - 'config_loader.py'
+      - 'requirements.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - run: python -m pytest tests/ -q --tb=short
+
+  merge:
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate config
+        run: python merge_rules.py validate config/sources.yaml
+
+      - name: Restore rule cache
+        uses: actions/cache@v4
+        with:
+          path: cache/
+          key: rule-cache-v5-${{ github.run_id }}
+          restore-keys: |
+            rule-cache-v5-
+
+      - name: Run merge
+        run: |
+          echo "::group::Merge Output"
+          python merge_rules.py merge --config config/sources.yaml
+          echo "::endgroup::"
+
+      - name: Save rule cache
+        uses: actions/cache@v4
+        with:
+          path: cache/
+          key: rule-cache-v5-${{ github.run_id }}
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          # Only commit when output actually changed; never empty-commit.
+          if git diff --cached --quiet; then
+            echo "No changes — skipping commit"
+          else
+            git commit -m "Auto-merge V5: update rules $(date -u +'%Y-%m-%d %H:%M UTC')"
+            # Rebase onto remote before push to avoid non-fast-forward aborts.
+            git pull --rebase origin main || true
+            git push origin main || echo "push failed (no changes / race)"
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: merged-rules-v5
+          path: output/
+          retention-days: 30
