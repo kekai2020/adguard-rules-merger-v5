@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (suspicious)
 ! Count: 27
-! Generated: 2026-09-23T14:49:33.618790+00:00
+! Generated: 2026-09-23T15:26:24.756577+00:00
 @@||5471782.fls.doubleclick.net^
 @@||79423.analytics.edgekey.net^
 @@||a.adwolf.ru^

@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "generated_at": "2026-09-23T14:49:33.364491+00:00",
+  "generated_at": "2026-09-23T15:26:24.490678+00:00",
   "sources": {
     "total": 18,
     "ok": 18,
@@ -15,8 +15,8 @@
     "dedup_rate": 16.7
   },
   "dedup": {
-    "exact_merged": 583974,
-    "normalized_merged": 5022,
+    "exact_merged": 584168,
+    "normalized_merged": 4828,
     "regex_merged": 0
   },
   "optimization": {
@@ -822,5 +822,5 @@
     "added": 0,
     "removed": 0
   },
-  "elapsed_seconds": 87.253
+  "elapsed_seconds": 79.472
 }

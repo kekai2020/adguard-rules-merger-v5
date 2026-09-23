@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 微软/Windows 遥测)
 ! Count: 6
-! Generated: 2026-09-23T14:49:33.619272+00:00
+! Generated: 2026-09-23T15:26:24.757321+00:00
 @@||c.office.com^
 @@||insideruser.microsoft.com^
 @@||js.monitor.azure.com^
