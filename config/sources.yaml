@@ -102,11 +102,6 @@ output:
   formats:
     - adguard
     - whitelist
-    - hosts
-    - domains
-    - clash
-    - surge
-    - smartdns
   tiered: true
   report: true
   write_diff: false
