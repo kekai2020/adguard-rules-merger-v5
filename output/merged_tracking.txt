@@ -1,7 +1,7 @@
 ! Title: Merged tracking filter (V5)
 ! Category: tracking
-! Version: 202609231209
-! Rules: 370
+! Version: 63d52e429254
+! Rules: 380
 !
 ||a-ring-fallback.msedge.net^
 ||a-ring.msedge.net^
@@ -37,7 +37,10 @@
 ||analyticsehnwe.servicebus.windows.net^
 ||analyticspixel.microsoft.com^
 ||api.applicationinsights.azure.cn^
+||appex-rf.msn.com^
 ||applicationinsights.azure.com^
+||applicationinsights.azure.us^
+||applicationinsights.io^
 ||applicationinsights.microsoft.com^
 ||arc-emea.msn.com^
 ||arc.msn.com^
@@ -46,6 +49,7 @@
 ||arc3.msn.com^
 ||arc5.msn.com^
 ||arc9.msn.com^
+||aria.microsoft.com^
 ||auc-visio-telemetry.officeapps.live.com^
 ||az667904.vo.msecnd.net^
 ||azurewatson.microsoft.com^
@@ -127,6 +131,8 @@
 ||collector.azure.microsoft.cloud^
 ||commerce.bing.com^
 ||confiant.msn.com^
+||data.msn.com^
+||datamart.windows.com^
 ||dc.applicationinsights.azure.cn^
 ||dc.services.visualstudio.com^
 ||dec-visio-telemetry.officeapps.live.com^
@@ -136,6 +142,7 @@
 ||dual-s-ring.msedge.net^
 ||eaus2watcab01.blob.core.windows.net^
 ||eaus2watcab02.blob.core.windows.net^
+||edgeoffer.microsoft.com^
 ||ehtelemetrystaging-alias.servicebus.windows.net^
 ||euc-excel-telemetry.officeapps.live.com^
 ||euc-excel-telemetry.wac.trafficmanager.net^
@@ -209,6 +216,7 @@
 ||measure.office.net.edgesuite.net^
 ||mobileads.msn.com^
 ||mobileleads.msn.com^
+||monitor.azure.com^
 ||msads.net^
 ||msadsscale.azureedge.net^
 ||msadsscale.microsoft.com^
@@ -285,6 +293,7 @@
 ||prod-eventhub-analytics.servicebus.windows.net^
 ||prod.editor.ads.trafficmanager.net^
 ||production-jobactivity-analytics.servicebus.windows.net^
+||r.msn.com^
 ||rad.live.com^
 ||rad.microsoft.com^
 ||rads.msn.com^
@@ -349,6 +358,7 @@
 ||udc.msn.com^
 ||ukc-onenote-telemetry.officeapps.live.com^
 ||ukc-visio-telemetry.officeapps.live.com^
+||urs.microsoft.com^
 ||us-mesh-events-data-leafs.trafficmanager.net^
 ||usc-onenote-telemetry.officeapps.live.com^
 ||usc-visio-telemetry.officeapps.live.com^

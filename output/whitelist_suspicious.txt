@@ -1,0 +1,30 @@
+! Title: AdGuard Rules Merger — Whitelist (suspicious)
+! Count: 27
+! Generated: 2026-09-23T14:49:33.618790+00:00
+@@||5471782.fls.doubleclick.net^
+@@||79423.analytics.edgekey.net^
+@@||a.adwolf.ru^
+@@||ad.10010.com^
+@@||ad.cityu.edu.hk^
+@@||ads.tdbank.com^
+@@||ap01.records.in.treasuredata.com^
+@@||clickattr.wayup.com^
+@@||dns.msftncsi.com^
+@@||edge-enterprise.activity.windows.com^
+@@||edge.activity.windows.com^
+@@||email.procook.co.uk^
+@@||fritz.nas^
+@@||grp07.ias.rakuten.co.jp^
+@@||guce.advertising.com^
+@@||hb.afl.rakuten.co.jp^
+@@||links.e.theatlantic.com^
+@@||ma135-r.analytics.edgekey.net^
+@@||meizu.coapi.moji.com^
+@@||news-app.abumedia.yql.yahoo.com^
+@@||omniture.walmart.com^
+@@||pt.afl.rakuten.co.jp^
+@@||s.mvconf.f.360.cn^
+@@||sponsor.nitropay.com^
+@@||stat.jseea.cn^
+@@||thumbnail.thench.net^
+@@||tlaol.com^

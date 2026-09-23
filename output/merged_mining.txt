@@ -1,24 +1,27 @@
 ! Title: Merged mining filter (V5)
 ! Category: mining
-! Version: 202609231209
-! Rules: 145
+! Version: cad89640189f
+! Rules: 167
 !
 ||1q2w3.fun^
 ||aeros01.tk^
 ||aeros11.tk^
 ||analytics.blue^
 ||andlache.com^
+||animeteatr.ru^
 ||anybest.pw^
 ||ashgrrwt.click^
+||authcaptcha.com^
 ||authedmine.com^
 ||autologica.ga^
 ||axoncoho.tk^
 ||bablace.com^
 ||baiduccdn1.com^
 ||becanium.com^
+||beeppool.org^
 ||berateveng.ru^
 ||besti.ga^
-||bestsrv.de^
+||bestmobiworld.com^
 ||bewaslac.com^
 ||biberukalap.com^
 ||bitcoin-cashcard.de^
@@ -32,9 +35,11 @@
 ||bmst.pw^
 ||brominer.com^
 ||browsermine.com^
+||cfcdist.loan^
 ||clgserv.pro^
 ||cloud-miner.de^
 ||cloudcdn.gdn^
+||cloudcoins.co^
 ||cnhv.co^
 ||coin-have.com^
 ||coinblind.com^
@@ -44,6 +49,7 @@
 ||coinnebula.com^
 ||coinpot.co^
 ||coinrail.io^
+||cpufan.club^
 ||crypto-loot.com^
 ||dark-utilities.me^
 ||dark-utilities.pw^
@@ -52,6 +58,7 @@
 ||de-ner-mi-nis4.info^
 ||de-nis-ner-mi-5.info^
 ||depttake.ga^
+||devphp.org.ua^
 ||dronml.ml^
 ||eth-pocket.com^
 ||eth-pocket.de^
@@ -70,6 +77,7 @@
 ||freecontent.win^
 ||g1thub.com^
 ||gasolina.ml^
+||gay-hotvideo.net^
 ||goldoffer.online^
 ||gxbrowser.net^
 ||hhb123.tk^
@@ -77,9 +85,13 @@
 ||hostingcloud.racing^
 ||hostingcloud.trade^
 ||hostingcloud.win^
+||icemining.ca^
 ||ijfcm7bu6ocerxsfq56ka3dtdanunyp4ytwk745b54agtravj2wr2qqd.onion.pet^
+||infura-ipfs.io^
 ||ininmacerad.pro^
 ||intelserviceupdate.com^
+||inwemo.com^
+||istlandoll.com^
 ||jqcdn01.herokuapp.com^
 ||jqcdn03.herokuapp.com^
 ||jqcdn2.herokuapp.com^
@@ -90,6 +102,7 @@
 ||jshosting.win^
 ||jurty.ml^
 ||ledhenone.com^
+||lolopool.com^
 ||losital.ru^
 ||machieved.com^
 ||mebablo.com^
@@ -107,10 +120,13 @@
 ||mxcdn1.now.sh^
 ||mxcdn2.now.sh^
 ||my.domain^
+||nahnoji.cz^
 ||nametraff.com^
 ||nathetsof.com^
 ||nch-software.info^
+||nexioniect.com^
 ||niematego.tk^
+||nimiq.by^
 ||ninaning.com^
 ||npcdn1.now.sh^
 ||nvidia-graphics.top^
@@ -120,14 +136,18 @@
 ||papoto.com^
 ||party-vqgdyvoycc.now.sh^
 ||pearno.com^
+||pebx.pl^
+||pema.cl^
 ||pr0gram.org^
 ||proofly.win^
+||rand.com.ru^
 ||roastedvolt.net^
 ||rocks.io^
 ||scaleway.ovh^
 ||service4refresh.info^
 ||sparechange.io^
 ||staticsfs.host^
+||statistic.date^
 ||stonecalcom.com^
 ||swiftmining.win^
 ||sxcdn02.now.sh^
@@ -135,7 +155,9 @@
 ||sxcdn4.now.sh^
 ||sxcdn5.herokuapp.com^
 ||sxcdn6.now.sh^
+||terorie.com^
 ||thewhizmarketing.com^
+||to-support.me^
 ||uoldid.ru^
 ||vceilinichego.ru^
 ||videoplayer2.xyz^
