@@ -1,0 +1,229 @@
+# AdGuard Rules Merger V5 — Source configuration
+# 18 sources with explicit categories (fixes V4 tiered-output bug).
+# Updated: 2026-09-22
+
+# ── Global merge settings ──────────────────────────────────────────
+timeout: 120
+max_concurrency: 50
+# Abort if more than 50% of enabled sources fail to download.
+fail_threshold: 0.5
+# Optional: diff against the previous domains.txt (set to e.g. output/domains.txt).
+diff_against: null
+
+# ── Download settings ─────────────────────────────────────────────
+download:
+  user_agent: "AdGuard-Rules-Merger/5.0"
+  retry_count: 2
+  retry_delay: 1.5
+
+# ── Dedup settings ──────────────────────────────────────────────────
+# V5: lowercasing and trailing-dot removal are ALWAYS applied (not configurable).
+# Only www-stripping is optional.
+dedup:
+  strip_www: true
+
+# ── Quality filter settings ─────────────────────────────────────────
+quality_filter:
+  enabled: true
+  min_domain_length: 4
+  max_domain_length: 253
+  filter_localhost: true
+  filter_ip_rules: false
+
+# ── Aggregation settings ────────────────────────────────────────────
+aggregation:
+  enabled: true
+  min_aggregator_labels: 2
+  # V5: fold ||*.sub.example.com^ under ||*.example.com^ / ||example.com^
+  wildcard_child_aggregation: true
+  # V5: promote N exact sibling subdomains to one ||*.parent^ (0 = off, conservative).
+  # Raise to e.g. 100 only if you accept slightly wider blocking to shrink the list.
+  wildcard_promotion_threshold: 0
+
+# ── Conflict resolution settings ────────────────────────────────────
+conflict_resolution:
+  enabled: true
+  # V5: this flag now genuinely controls @@||A^ cascading to subdomains.
+  cascade_subdomains: true
+
+# ── Whitelist threat-intel audit (optional) ─────────────────────────
+# Uses free keyless checks (DNS resolution + URLhaus API) to classify each
+# whitelist domain as safe / suspicious / malicious. Disabled by default
+# because it adds network requests and latency. Enable to get
+# whitelist_audit.json and an audit section in the reports.
+whitelist_audit:
+  enabled: false
+  concurrency: 10
+  # Layer 1: DNS resolution (free, keyless)
+  use_dns: true
+  # Layer 2: Threat intelligence (free, keyless)
+  use_urlhaus: true
+  use_threatfox: true
+  urlhaus_delay: 1.0
+  # Layer 3: RDAP domain age check (free, keyless)
+  # Flags domains registered < new_domain_threshold_days as suspicious
+  use_rdap: true
+  new_domain_threshold_days: 30
+  # Layer 4: MarketNow scam/phishing check (free, keyless)
+  # Detects typosquatting, suspicious TLD, punycode, unregistered domains
+  use_scam_check: true
+  # Layer 5: VirusTotal (optional, requires API key)
+  use_virustotal: false
+  virustotal_api_key: ""
+  # Layer 6: AI / LLM classification (optional, requires API key)
+  # Only called for domains where offline confidence < ai.min_confidence
+  ai:
+    enabled: false
+    api_key: ""
+    base_url: "https://api.openai.com/v1"
+    model: "gpt-4o-mini"
+    min_confidence: 0.6
+    max_domains: 100
+
+# V5: graded whitelist output (requires whitelist_audit.enabled=true)
+# Splits whitelist.txt into sub-files by rating and category.
+whitelist_output:
+  enabled: true
+  by_rating: true            # whitelist_safe.txt, whitelist_suspicious.txt, ...
+  by_category: true          # whitelist_by_category/<rating>_<category>.txt
+  include_all_ratings: false # only split "safe" by category by default
+  categories: []             # empty = all 9 categories; or list e.g. [advertising, cdn]
+
+# ── Cache settings (ETag + SHA256, compatible with actions/cache) ──
+cache:
+  enabled: true
+  directory: cache
+  ttl_seconds: 0
+  max_size_mb: 500
+
+# ── Output settings ────────────────────────────────────────────────
+output:
+  directory: output
+  formats:
+    - adguard
+    - whitelist
+    - hosts
+    - domains
+    - clash
+    - surge
+    - smartdns
+  tiered: true
+  report: true
+  write_diff: false
+
+# ── Rule sources (18 enabled) ──────────────────────────────────────
+# Categories: ads | tracking | malware | phishing | mining | other
+# On duplicate domains the security-first priority applies:
+# malware > phishing > mining > tracking > ads > other
+sources:
+  # ==================== 广告拦截 ====================
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+    name: AdGuard DNS filter
+    category: ads
+    id: 1
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_53.txt
+    name: AWAvenue Ads Rule
+    category: ads
+    id: 2
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt
+    name: HaGeZi's Ultimate Blocklist
+    category: ads
+    id: 3
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_5.txt
+    name: OISD Blocklist Small
+    category: ads
+    id: 4
+
+  # ==================== 专项 / 其它 ====================
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_47.txt
+    name: HaGeZi's Gambling Blocklist
+    category: other
+    id: 5
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_63.txt
+    name: HaGeZi's Windows/Office Tracker Blocklist
+    category: tracking
+    id: 6
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_57.txt
+    name: ShadowWhisperer's Dating List
+    category: other
+    id: 7
+
+  # ==================== 区域 / 中国大陆 ====================
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_29.txt
+    name: 'CHN: AdRules DNS List'
+    category: ads
+    id: 8
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_21.txt
+    name: 'CHN: anti-AD'
+    category: ads
+    id: 9
+
+  # ==================== 安全威胁 ====================
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_30.txt
+    name: Phishing URL Blocklist (PhishTank and OpenPhish)
+    category: phishing
+    id: 10
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_71.txt
+    name: HaGeZi's DNS Rebind Protection
+    category: malware
+    id: 11
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_52.txt
+    name: HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass
+    category: other
+    id: 12
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_44.txt
+    name: HaGeZi's Threat Intelligence Feeds
+    category: malware
+    id: 13
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt
+    name: NoCoin Filter List
+    category: mining
+    id: 14
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_18.txt
+    name: Phishing Army
+    category: phishing
+    id: 15
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_10.txt
+    name: Scam Blocklist by DurableNapkin
+    category: phishing
+    id: 16
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_31.txt
+    name: Stalkerware Indicators List
+    category: malware
+    id: 17
+
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt
+    name: Malicious URL Blocklist (URLHaus)
+    category: malware
+    id: 18
