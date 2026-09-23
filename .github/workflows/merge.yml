@@ -35,8 +35,8 @@ jobs:
 
   merge:
     needs: test
-    runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    runs-on: ubuntu-26.04
+    timeout-minutes: 40
 
     steps:
       - name: Checkout
@@ -85,21 +85,34 @@ jobs:
           test -f output/merged_rules.txt || (echo "ERROR: merged_rules.txt not found" && exit 1)
           echo "merged_rules.txt lines: $(wc -l < output/merged_rules.txt)"
 
-      - name: Commit if changed
+      - name: Debug git state
+        run: |
+          echo "=== git status ==="
+          git status
+          echo "=== output/ exists? ==="
+          ls -la output/ | head -20
+          echo "=== output/ tracked by git? ==="
+          git ls-files output/ | head -5
+          echo "=== .gitignore check ==="
+          git check-ignore -v output/merged_rules.txt || echo "not ignored (or not tracked)"
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # -f required because output/ is in .gitignore (local dev ignores it,
-          # but CI must commit the generated rules).
+          # Clear any stale tracked state then force-add output/ (it's in .gitignore
+          # for local dev, but CI must commit the generated rules).
+          git rm -r --cached output/ 2>/dev/null || true
           git add -f output/
-          # Only commit when output actually changed; never empty-commit.
+          echo "=== staged changes ==="
+          git diff --cached --stat
           if git diff --cached --quiet; then
-            echo "No changes — skipping commit"
+            echo "No changes detected — skipping commit"
           else
             git commit -m "Auto-merge V5: update rules $(date -u +'%Y-%m-%d %H:%M UTC')"
-            # Rebase onto remote before push to avoid non-fast-forward aborts.
-            git pull --rebase origin main || true
-            git push origin main || echo "push failed (no changes / race)"
+            echo "=== pushing ==="
+            git push origin main
+            echo "Push successful"
           fi
 
       - name: Upload artifacts
