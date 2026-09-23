@@ -52,7 +52,7 @@ conflict_resolution:
 # because it adds network requests and latency. Enable to get
 # whitelist_audit.json and an audit section in the reports.
 whitelist_audit:
-  enabled: false
+  enabled: true
   concurrency: 20
   # Layer 1: DNS resolution (free, keyless)
   use_dns: true
