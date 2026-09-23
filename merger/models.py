@@ -31,7 +31,7 @@ ALL_CATEGORIES = frozenset({
 
 TIERED_CATEGORIES = (
     CATEGORY_ADS, CATEGORY_MALWARE, CATEGORY_TRACKING,
-    CATEGORY_PHISHING, CATEGORY_MINING,
+    CATEGORY_PHISHING, CATEGORY_MINING, CATEGORY_OTHER,
 )
 
 # When the same domain appears in sources with different categories, the

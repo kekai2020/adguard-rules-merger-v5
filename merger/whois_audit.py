@@ -42,7 +42,8 @@ def _parse_iso_date(date_str: str) -> Optional[datetime]:
         return None
 
 
-def parse_rdap_response(data: Dict[str, Any]) -> Dict[str, Any]:
+def parse_rdap_response(data: Dict[str, Any],
+                        threshold_days: int = NEW_DOMAIN_THRESHOLD_DAYS) -> Dict[str, Any]:
     """Extract registration signals from an RDAP JSON response.
 
     Returns dict with: registration_date, domain_age_days, registrar,
@@ -98,7 +99,7 @@ def parse_rdap_response(data: Dict[str, Any]) -> Dict[str, Any]:
         age = (now - reg_date).days
         result["registration_date"] = reg_date.isoformat()
         result["domain_age_days"] = age
-        result["is_new_domain"] = age < NEW_DOMAIN_THRESHOLD_DAYS
+        result["is_new_domain"] = age < threshold_days
     if exp_date:
         result["expires_at"] = exp_date.isoformat()
     result["registrar"] = registrar
@@ -106,7 +107,8 @@ def parse_rdap_response(data: Dict[str, Any]) -> Dict[str, Any]:
     return result
 
 
-async def query_rdap(domain: str, session, timeout: int = 15) -> Dict[str, Any]:
+async def query_rdap(domain: str, session, timeout: int = 10,
+                     threshold_days: int = NEW_DOMAIN_THRESHOLD_DAYS) -> Dict[str, Any]:
     """Query RDAP for a domain's registration data.
 
     Args:
@@ -128,6 +130,6 @@ async def query_rdap(domain: str, session, timeout: int = 15) -> Dict[str, Any]:
                 return {"error": f"HTTP {resp.status}",
                         "is_new_domain": False, "domain_age_days": None}
             data = await resp.json(content_type=None)
-            return parse_rdap_response(data)
+            return parse_rdap_response(data, threshold_days)
     except Exception as e:
         return {"error": str(e), "is_new_domain": False, "domain_age_days": None}

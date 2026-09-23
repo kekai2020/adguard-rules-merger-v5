@@ -28,11 +28,11 @@ from typing import Any, Dict, Iterable, List
 
 from .models import (
     Rule, CATEGORY_ADS, CATEGORY_MALWARE, CATEGORY_TRACKING,
-    CATEGORY_PHISHING, CATEGORY_MINING, TIERED_CATEGORIES,
+    CATEGORY_PHISHING, CATEGORY_MINING, CATEGORY_OTHER, TIERED_CATEGORIES,
 )
 from .report import analyze_rules, generate_html_report, generate_markdown_report
 
-HOMEPAGE = "https://github.com/kekai2020/AdGuard-Rules-Merger-V5"
+HOMEPAGE = "https://github.com/kekai2020/adguard-rules-merger-v5"
 
 
 def _now() -> datetime:
@@ -41,6 +41,20 @@ def _now() -> datetime:
 
 def _version_stamp(dt: datetime) -> str:
     return dt.strftime("%Y%m%d%H%M")
+
+
+def _content_hash(blocks: List[Rule], allows: List[Rule]) -> str:
+    """SHA-256 hash of all rule bodies (excluding headers).
+
+    Used as the Version field so that unchanged rules produce a byte-identical
+    merged_rules.txt — critical for CI "commit only when changed" logic.
+    """
+    import hashlib
+    h = hashlib.sha256()
+    for r in blocks + allows:
+        h.update(r.output_raw.encode("utf-8", errors="replace"))
+        h.update(b"\n")
+    return h.hexdigest()[:12]
 
 
 class Exporter:
@@ -77,13 +91,14 @@ class Exporter:
         before = outcome.raw_count
         after = len(blocks) + len(allows)
         dedup_rate = (1 - after / before) * 100 if before else 0.0
+        content_ver = _content_hash(blocks, allows)
         cats = " ".join(f"{k}={cat_counts.get(k, 0)}" for k in
                         ("ads", "malware", "tracking", "phishing", "mining", "other"))
         lines = [
             "! Title: Merged AdGuard Home Filter Rules (V5)",
             f"! Description: Auto-merged from {src_tot} sources (dedup + aggregation + conflict resolution)",
-            f"! Version: {_version_stamp(now)}",
-            f"! Last modified: {now.isoformat()}",
+            f"! Version: {content_ver}",
+            f"! Generated: {now.isoformat()}",
             f"! Homepage: {HOMEPAGE}",
             f"! Total block rules: {len(blocks)}",
             f"! Total whitelist rules: {len(allows)}",
@@ -92,7 +107,7 @@ class Exporter:
             f"! Exact dedup: {outcome.exact_merged} | Normalized dedup: {outcome.normalized_merged} | Regex dedup: {outcome.regex_merged}",
             f"! Aggregated: exact={outcome.aggregated} wildcard={outcome.wildcard_aggregated} promoted={outcome.wildcard_promoted}",
             f"! Conflicts resolved: {outcome.conflict_resolved}",
-            f"! Dropped: pattern={outcome.pattern_dropped} quality={outcome.quality_dropped} css={outcome.css_dropped}",
+            f"! Dropped: pattern={outcome.pattern_dropped} quality={outcome.quality_dropped} css={outcome.css_dropped} badfilter={getattr(outcome, 'badfilter_removed', 0)}",
             f"! Categories: {cats}",
         ]
         if outcome.failed_sources:
@@ -104,10 +119,12 @@ class Exporter:
 
     def _whitelist_header(self, allows: List[Rule]) -> List[str]:
         now = _now()
+        content_ver = _content_hash([], allows)
         return [
             "! Title: Whitelist for Merged Rules (V5)",
             "! Description: Allow rules separated from main filter",
-            f"! Version: {_version_stamp(now)}",
+            f"! Version: {content_ver}",
+            f"! Generated: {now.isoformat()}",
             f"! Total allow rules: {len(allows)}",
             "!",
         ]
@@ -123,9 +140,20 @@ class Exporter:
                 f.write(line + "\n")
 
     def _domain_rules(self, blocks: List[Rule]):
-        """Yield only domain rules (skip regex) for hosts/domains/clash formats."""
+        """Yield only domain rules (skip regex AND skip modifier rules) for
+        hosts/domains/clash/surge/smartdns formats.
+
+        These plain-domain formats cannot express $ modifiers. A rule like
+        ||pl.ua^$badfilter means "cancel blocking" — writing it as
+        0.0.0.0 pl.ua would invert its semantics. So modifier-bearing rules
+        are skipped here and counted in self.modifier_skipped.
+        """
         seen = set()
+        self.modifier_skipped = 0
         for b in blocks:
+            if b.modifiers:
+                self.modifier_skipped += 1
+                continue
             d = b.normalized_domain
             if d and d not in seen:
                 seen.add(d)
@@ -188,13 +216,14 @@ class Exporter:
             CATEGORY_TRACKING: "merged_tracking.txt",
             CATEGORY_PHISHING: "merged_phishing.txt",
             CATEGORY_MINING: "merged_mining.txt",
+            CATEGORY_OTHER: "merged_other.txt",
         }
-        now = _now()
         for cat, rules in buckets.items():
+            content_ver = _content_hash(rules, [])
             header = [
                 f"! Title: Merged {cat} filter (V5)",
                 f"! Category: {cat}",
-                f"! Version: {_version_stamp(now)}",
+                f"! Version: {content_ver}",
                 f"! Rules: {len(rules)}",
                 "!",
             ]
@@ -240,6 +269,8 @@ class Exporter:
                 "pattern_dropped": outcome.pattern_dropped,
                 "quality_dropped": outcome.quality_dropped,
                 "css_dropped": outcome.css_dropped,
+                "badfilter_removed": getattr(outcome, "badfilter_removed", 0),
+                "modifier_rules_skipped": getattr(self, "modifier_skipped", 0),
             },
             "categories": {
                 "ads": cat_counts.get(CATEGORY_ADS, 0),

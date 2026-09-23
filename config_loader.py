@@ -188,6 +188,9 @@ class MergeConfig(BaseModel):
         urls = [s.url for s in enabled]
         if len(urls) != len(set(urls)):
             raise ValueError("Duplicate source URLs detected")
+        ids = [s.id for s in enabled if s.id is not None]
+        if len(ids) != len(set(ids)):
+            raise ValueError("Duplicate source ids detected")
         valid_cats = {"ads", "malware", "tracking", "phishing", "mining", "other"}
         invalid_cats = {s.category for s in enabled if s.category not in valid_cats}
         if invalid_cats:

@@ -85,8 +85,8 @@ class AuditConfig:
     ai_model: str = "gpt-4o-mini"
     ai_min_confidence: float = 0.6
     ai_max_domains: int = 100
-    concurrency: int = 10
-    urlhaus_delay: float = 1.0
+    concurrency: int = 20
+    urlhaus_delay: float = 0.2
     new_domain_threshold_days: int = 30
 
 
@@ -97,8 +97,9 @@ class _CacheEntry:
 
 
 _result_cache: Dict[str, _CacheEntry] = {}
-# Global lock for rate-limited threat-intel APIs (URLhaus / ThreatFox)
-_ti_lock = asyncio.Lock()
+# Semaphore for rate-limited threat-intel APIs (URLhaus / ThreatFox).
+# Allows limited concurrency instead of serializing all requests.
+_ti_sem = asyncio.Semaphore(3)
 
 
 def _is_private_ip(ip_str: str) -> bool:
@@ -120,7 +121,7 @@ def _cache_set(key: str, result: Dict[str, Any]) -> None:
     _result_cache[key] = _CacheEntry(result=result)
 
 
-async def _dns_check(domain: str, timeout: int = 10) -> Dict[str, Any]:
+async def _dns_check(domain: str, timeout: int = 5) -> Dict[str, Any]:
     """Async DNS resolution (IPv4 + IPv6)."""
     try:
         loop = asyncio.get_running_loop()
@@ -139,7 +140,7 @@ async def _dns_check(domain: str, timeout: int = 10) -> Dict[str, Any]:
         return {"nxdomain": False, "ips": [], "error": str(e)}
 
 
-async def _query_urlhaus(domain: str, session, timeout: int = 15) -> Dict[str, Any]:
+async def _query_urlhaus(domain: str, session, timeout: int = 8) -> Dict[str, Any]:
     try:
         data = {"host": domain}
         headers = {"User-Agent": "AdGuard-Rules-Merger/5.0"}
@@ -155,7 +156,7 @@ async def _query_urlhaus(domain: str, session, timeout: int = 15) -> Dict[str, A
         return {"malicious": False, "error": str(e)}
 
 
-async def _query_threatfox(domain: str, session, timeout: int = 15) -> Dict[str, Any]:
+async def _query_threatfox(domain: str, session, timeout: int = 8) -> Dict[str, Any]:
     try:
         data = {"query": "search_ioc", "search_term": domain}
         headers = {"User-Agent": "AdGuard-Rules-Merger/5.0"}
@@ -173,9 +174,10 @@ async def _query_threatfox(domain: str, session, timeout: int = 15) -> Dict[str,
 
 async def _query_threat_intel(domain: str, session, idx: int,
                                config: AuditConfig) -> Tuple[Dict, Dict]:
-    """Query URLhaus + ThreatFox with global rate-limit lock.
+    """Query URLhaus + ThreatFox with rate-limit semaphore.
 
-    Both APIs share one lock to serialize requests and enforce the delay.
+    Uses a semaphore (default 3 concurrent) instead of a global lock,
+    and a fixed small delay rather than idx-proportional sleep.
     Returns (urlhaus_result, threatfox_result).
     """
     urlhaus = {"malicious": False, "error": "disabled"}
@@ -184,9 +186,10 @@ async def _query_threat_intel(domain: str, session, idx: int,
     if not (config.use_urlhaus or config.use_threatfox):
         return urlhaus, threatfox
 
-    async with _ti_lock:
-        # Stagger requests by index to avoid burst
-        await asyncio.sleep(idx * config.urlhaus_delay)
+    async with _ti_sem:
+        # Fixed small delay to avoid burst; NOT idx-proportional.
+        if config.urlhaus_delay > 0:
+            await asyncio.sleep(config.urlhaus_delay)
         if config.use_urlhaus:
             urlhaus = await _query_urlhaus(domain, session)
         if config.use_threatfox:
@@ -195,12 +198,13 @@ async def _query_threat_intel(domain: str, session, idx: int,
     return urlhaus, threatfox
 
 
-async def _query_rdap_wrapper(domain: str, session) -> Dict[str, Any]:
+async def _query_rdap_wrapper(domain: str, session, config: AuditConfig) -> Dict[str, Any]:
     """RDAP query using registered domain (eTLD+1)."""
     try:
         from .domain_classifier import _registered_domain
         reg_domain = _registered_domain(domain)
-        return await query_rdap(reg_domain, session)
+        return await query_rdap(reg_domain, session,
+                                threshold_days=config.new_domain_threshold_days)
     except Exception as e:
         return {"is_new_domain": False, "domain_age_days": None,
                 "registrar": None, "error": str(e)}
@@ -250,12 +254,21 @@ def _fuse_rating(dns, urlhaus, threatfox, rdap, scam, vt, config) -> Tuple[str, 
         )
         return RATING_SUSPICIOUS, reasons
 
-    # All checks failed → unknown
-    if dns.get("error") and not (config.use_urlhaus or config.use_threatfox):
-        reasons.append(f"DNS 查询失败: {dns['error']}")
+    # DNS failure: never claim "DNS normal"; return unknown if no TI hit.
+    dns_error = dns.get("error")
+    ti_disabled = (not config.use_urlhaus and not config.use_threatfox
+                   and not config.use_virustotal)
+    ti_all_errors = (
+        (not config.use_urlhaus or urlhaus.get("error") not in (None, "disabled"))
+        and (not config.use_threatfox or threatfox.get("error") not in (None, "disabled"))
+        and (not config.use_virustotal or vt.get("error") not in (None, "disabled"))
+    )
+    if dns_error and (ti_disabled or ti_all_errors):
+        reasons.append(f"检测不完整：DNS 查询失败 ({dns_error})，威胁情报无有效命中")
         return RATING_UNKNOWN, reasons
-    if dns.get("error") and urlhaus.get("error") and urlhaus.get("error") != "disabled":
-        reasons.append(f"DNS: {dns['error']}; URLhaus: {urlhaus['error']}")
+
+    if dns_error:
+        reasons.append(f"DNS 查询失败 ({dns_error})，但威胁情报无命中")
         return RATING_UNKNOWN, reasons
 
     reasons.append("DNS 正常解析，无威胁情报标记")
@@ -296,6 +309,8 @@ async def audit_whitelist(
     layer_hits = {"dns_nxdomain": 0, "dns_private_ip": 0, "urlhaus": 0,
                   "threatfox": 0, "rdap_new_domain": 0, "scam_check": 0,
                   "virustotal": 0, "ai_classified": 0}
+    # AI budget: limit LLM calls to config.ai_max_domains (cost control)
+    ai_budget = [config.ai_max_domains]  # list for nonlocal mutation in nested fn
 
     async with aiohttp.ClientSession() as session:
 
@@ -326,7 +341,7 @@ async def audit_whitelist(
                     task_names.append("ti")
 
                 if config.use_rdap:
-                    tasks.append(_query_rdap_wrapper(domain, session))
+                    tasks.append(_query_rdap_wrapper(domain, session, config))
                     task_names.append("rdap")
 
                 if config.use_scam_check:
@@ -363,7 +378,9 @@ async def audit_whitelist(
                 ai_result = {"category": None, "confidence": 0.0,
                              "reason": "", "error": "disabled"}
                 if (config.use_ai and config.ai_api_key
-                        and confidence < config.ai_min_confidence):
+                        and confidence < config.ai_min_confidence
+                        and ai_budget[0] > 0):
+                    ai_budget[0] -= 1
                     try:
                         ai_result = await classify_with_ai(
                             domain, config.ai_api_key, session,

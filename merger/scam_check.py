@@ -45,7 +45,7 @@ SCORE_SUSPICIOUS = 30
 SCORE_HIGH = 70
 
 
-async def query_scam_check(domain: str, session, timeout: int = 20) -> Dict[str, Any]:
+async def query_scam_check(domain: str, session, timeout: int = 10) -> Dict[str, Any]:
     """Query MarketNow scam check for a domain.
 
     Returns:

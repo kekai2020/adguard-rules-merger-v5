@@ -86,6 +86,7 @@ class MergeOutcome:
     pattern_dropped: int = 0
     quality_dropped: int = 0
     css_dropped: int = 0
+    badfilter_removed: int = 0       # V5: $badfilter rules + targets cancelled
     # diagnostics
     conflicts: List[Dict[str, Any]] = field(default_factory=list)
     failed_sources: List[Dict[str, str]] = field(default_factory=list)
@@ -272,7 +273,7 @@ class AsyncRuleEngine:
                          ) -> Tuple[List[Rule], bool, bool, int, Optional[str]]:
         """Return (rules, success, from_cache, raw_line_count, error)."""
         t0 = time.time()
-        text, from_cache, err = await self._fetch_text(meta.url)
+        text, from_cache, err = await self._fetch_text(meta.url, retries=self.retry_count)
         if err:
             logger.warning("source failed %s: %s", meta.url, err)
             return [], False, False, 0, err
@@ -349,6 +350,36 @@ class AsyncRuleEngine:
                 exact_merged, normalized_merged, regex_merged,
                 failures, source_raw_counts, source_names)
 
+    # ── badfilter cancellation ───────────────────────────────────
+
+    def _apply_badfilter(self, block_map: Dict, allow_map: Dict) -> int:
+        """Cancel $badfilter rules and their targets.
+
+        A $badfilter rule negates the rule with the same domain/wildcard but
+        without the badfilter modifier. Both the badfilter rule and its
+        target are removed from output.
+
+        Returns the number of rules removed (badfilter + targets).
+        """
+        def _modset(mods: str) -> set:
+            return {m.strip() for m in mods.split(",") if m.strip()}
+
+        removed = 0
+        for m in (block_map, allow_map):
+            bad_keys = [k for k, r in m.items()
+                        if r.modifiers and "badfilter" in _modset(r.modifiers)]
+            for bk in bad_keys:
+                bf = m.pop(bk)  # badfilter itself is not output
+                removed += 1
+                # Target key: same domain/wildcard, modifiers minus badfilter
+                remaining = sorted(_modset(bf.modifiers) - {"badfilter"})
+                tgt_mods = ",".join(remaining)
+                tgt_key = (bf.normalized_domain, bf.wildcard, tgt_mods)
+                if tgt_key in m:
+                    m.pop(tgt_key)
+                    removed += 1
+        return removed
+
     # ── upward aggregation ──────────────────────────────────────
 
     def _aggregate(self, block_map: Dict[Tuple[str, bool], Rule]
@@ -405,6 +436,7 @@ class AsyncRuleEngine:
                         child = exact_map.get(child_norm)
                         if child is not None and id(child) not in removed:
                             keeper.source_ids = tuple(sorted(set(keeper.source_ids) | set(child.source_ids)))
+                            keeper.category = merge_category(keeper.category, child.category)
                             removed.add(id(child))
                             promoted += 1
 
@@ -421,6 +453,7 @@ class AsyncRuleEngine:
                 keeper = wild_map.get(parent) or exact_map.get(parent)
                 if keeper is not None and id(keeper) != id(child):
                     keeper.source_ids = tuple(sorted(set(keeper.source_ids) | set(child.source_ids)))
+                    keeper.category = merge_category(keeper.category, child.category)
                     removed.add(id(child))
                     exact_agg += 1
                     break
@@ -440,6 +473,7 @@ class AsyncRuleEngine:
                 if same_exact is not None and id(same_exact) not in removed:
                     same_exact.source_ids = tuple(
                         sorted(set(same_exact.source_ids) | set(child.source_ids)))
+                    same_exact.category = merge_category(same_exact.category, child.category)
                     removed.add(id(child))
                     wild_agg += 1
                     continue
@@ -450,6 +484,7 @@ class AsyncRuleEngine:
                     keeper = wild_map.get(parent) or exact_map.get(parent)
                     if keeper is not None and id(keeper) != id(child):
                         keeper.source_ids = tuple(sorted(set(keeper.source_ids) | set(child.source_ids)))
+                        keeper.category = merge_category(keeper.category, child.category)
                         removed.add(id(child))
                         wild_agg += 1
                         break
@@ -471,17 +506,17 @@ class AsyncRuleEngine:
             return [source_names.get(s, s) for s in rule.source_ids]
 
         exact_allow: Dict[str, Rule] = {}
-        suffix_allow: Dict[str, Rule] = {}
+        wild_allow: Dict[str, Rule] = {}    # @@||*.x^: covers strict subdomains, not root
+        suffix_allow: Dict[str, Rule] = {}  # cascade=True: exact allow cascades to subdomains
         for a in allows:
             n = a.normalized_domain
             if not n:
                 continue  # regex allows don't participate
-            if self.cascade_subdomains:
-                suffix_allow[n] = a
-            if not a.wildcard:
+            if a.wildcard:
+                wild_allow[n] = a
+            else:
                 exact_allow[n] = a
-            elif not self.cascade_subdomains:
-                # wildcard allow without cascade: still covers exact subdomains
+            if self.cascade_subdomains:
                 suffix_allow[n] = a
 
         removed: Set[int] = set()
@@ -497,11 +532,18 @@ class AsyncRuleEngine:
             conflict_type = "exact"
             if n in exact_allow:
                 by = exact_allow[n]
-            elif self.cascade_subdomains:
+            else:
                 parts = n.split(".")
                 for i in range(1, len(parts)):
                     parent = ".".join(parts[i:])
-                    if parent in suffix_allow:
+                    # Wildcard allow ALWAYS covers strict subdomains,
+                    # even when cascade_subdomains=False.
+                    if parent in wild_allow:
+                        by = wild_allow[parent]
+                        conflict_type = "wildcard"
+                        break
+                    # Cascade: exact allow covers subdomains only when enabled.
+                    if self.cascade_subdomains and parent in suffix_allow:
                         by = suffix_allow[parent]
                         conflict_type = "cascade"
                         break
@@ -672,6 +714,11 @@ class AsyncRuleEngine:
         for r in list(block_map.values()) + list(allow_map.values()):
             r.raw = ""
 
+        # $badfilter cancellation: remove badfilter rules and their targets
+        badfilter_removed = self._apply_badfilter(block_map, allow_map)
+        if badfilter_removed:
+            logger.info("badfilter cancellation: removed %d rules", badfilter_removed)
+
         # aggregation
         aggregated_n = wild_agg_n = promoted_n = 0
         if self.aggregation_enabled:
@@ -762,6 +809,7 @@ class AsyncRuleEngine:
             pattern_dropped=self.parser.pattern_dropped,
             quality_dropped=self.parser.quality_dropped,
             css_dropped=self.parser.css_dropped,
+            badfilter_removed=badfilter_removed,
             conflicts=conflicts,
             failed_sources=[{"name": f.name, "url": f.url, "error": f.error} for f in failures],
             contributions=contributions,

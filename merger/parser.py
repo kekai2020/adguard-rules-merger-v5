@@ -92,17 +92,41 @@ class RuleParser:
         return False
 
     @staticmethod
+    @staticmethod
     def _split_modifiers(s: str):
-        """Return (line_without_$section, modifiers_str).
+        """Return (line_without_$section, normalized_modifiers_str).
 
         The first ``$`` starts the modifier section in AdGuard syntax.
         Regex rules are handled before this is called, so a ``$`` here is
         always a modifier separator.
+
+        Modifiers are normalized: lowercased, deduplicated, and sorted so
+        that ``$important,popup`` and ``$popup,important`` merge into one
+        rule. Valued modifiers (``dnstype=A``) keep their value but are
+        sorted alongside flag modifiers.
         """
         i = s.find("$")
         if i == -1:
             return s, ""
-        return s[:i].strip(), s[i + 1:].strip()
+        body = s[:i].strip()
+        mod_str = s[i + 1:].strip()
+        if not mod_str:
+            return body, ""
+        flags = []
+        valued = []
+        for m in mod_str.split(","):
+            m = m.strip().lower()
+            if not m:
+                continue
+            if "=" in m:
+                valued.append(m)
+            else:
+                flags.append(m)
+        # Deduplicate while preserving category
+        flags = sorted(set(flags))
+        valued = sorted(set(valued))
+        normalized = ",".join(flags + valued)
+        return body, normalized
 
     @staticmethod
     def _normalize_regex(raw: str) -> str:

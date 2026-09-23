@@ -52,14 +52,14 @@ conflict_resolution:
 # because it adds network requests and latency. Enable to get
 # whitelist_audit.json and an audit section in the reports.
 whitelist_audit:
-  enabled: true
-  concurrency: 10
+  enabled: false
+  concurrency: 20
   # Layer 1: DNS resolution (free, keyless)
   use_dns: true
   # Layer 2: Threat intelligence (free, keyless)
   use_urlhaus: true
   use_threatfox: true
-  urlhaus_delay: 1.0
+  urlhaus_delay: 0.2
   # Layer 3: RDAP domain age check (free, keyless)
   # Flags domains registered < new_domain_threshold_days as suspicious
   use_rdap: true
@@ -102,6 +102,11 @@ output:
   formats:
     - adguard
     - whitelist
+    - hosts
+    - domains
+    - clash
+    - surge
+    - smartdns
   tiered: true
   report: true
   write_diff: false
