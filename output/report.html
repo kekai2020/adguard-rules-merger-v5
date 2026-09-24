@@ -46,27 +46,27 @@ tr:hover { background:#f8f9fa; }
   <div class="header">
     <h1>🛡️ AdGuard Rules Merger V5</h1>
     <div class="subtitle">专业规则合并分析报告</div>
-    <div class="meta">生成时间：2026-09-23 15:26:31 | 源：18/18 | 缓存：18</div>
+    <div class="meta">生成时间：2026-09-24 02:27:26 | 源：18/18 | 缓存：8</div>
   </div>
 
   
 
   <div class="stats-grid">
-    <div class="stat-card"><div class="value">3,147,016</div><div class="label">Block 规则</div></div>
-    <div class="stat-card"><div class="value">226</div><div class="label">Allow 白名单</div></div>
+    <div class="stat-card"><div class="value">3,155,730</div><div class="label">Block 规则</div></div>
+    <div class="stat-card"><div class="value">227</div><div class="label">Allow 白名单</div></div>
     <div class="stat-card"><div class="value">16.7%</div><div class="label">综合去重率</div></div>
-    <div class="stat-card"><div class="value">40,058</div><div class="label">聚合精简</div></div>
-    <div class="stat-card"><div class="value">33</div><div class="label">冲突消解</div></div>
+    <div class="stat-card"><div class="value">40,074</div><div class="label">聚合精简</div></div>
+    <div class="stat-card"><div class="value">34</div><div class="label">冲突消解</div></div>
     <div class="stat-card"><div class="value">5</div><div class="label">带 $ 修饰符规则</div></div>
-    <div class="stat-card"><div class="value">79.5s</div><div class="label">总耗时</div></div>
+    <div class="stat-card"><div class="value">78.5s</div><div class="label">总耗时</div></div>
   </div>
 
   <div class="section">
     <h2>📊 优化流水线漏斗</h2>
-    <div class="funnel-step"><div class="step-name">原始规则（Raw）</div><div class="step-count">3,776,497</div><div class="step-diff">-</div></div>
-    <div class="funnel-step"><div class="step-name">去重后（精确 584,168 / 规范化 4,828 / 正则 0）</div><div class="step-count">3,187,501</div><div class="step-diff">-588,996</div></div>
-    <div class="funnel-step"><div class="step-name">聚合后（精确 40,056 / 通配符 2 / 升级 0）</div><div class="step-count">3,147,443</div><div class="step-diff">-40,058</div></div>
-    <div class="funnel-step"><div class="step-name">冲突消解后</div><div class="step-count">3,147,242</div><div class="step-diff">-33</div></div>
+    <div class="funnel-step"><div class="step-name">原始规则（Raw）</div><div class="step-count">3,789,599</div><div class="step-diff">-</div></div>
+    <div class="funnel-step"><div class="step-name">去重后（精确 588,329 / 规范化 5,037 / 正则 0）</div><div class="step-count">3,196,233</div><div class="step-diff">-593,366</div></div>
+    <div class="funnel-step"><div class="step-name">聚合后（精确 40,072 / 通配符 2 / 升级 0）</div><div class="step-count">3,156,159</div><div class="step-diff">-40,074</div></div>
+    <div class="funnel-step"><div class="step-name">冲突消解后</div><div class="step-count">3,155,957</div><div class="step-diff">-34</div></div>
   </div>
 
   <div class="two-col">
@@ -80,22 +80,22 @@ tr:hover { background:#f8f9fa; }
     <h2>🔗 按源贡献分析（独占 vs 共享）</h2>
     <table>
       <thead><tr><th>源</th><th>原始规则</th><th>独占规则</th><th>与其他源共享</th><th>独占率</th></tr></thead>
-      <tbody><tr><td>HaGeZi's Threat Intelligence Feeds</td><td>2,204,702</td><td>2,061,480</td><td>141,613</td><td>94%</td></tr>
-<tr><td>HaGeZi's Gambling Blocklist</td><td>531,612</td><td>525,063</td><td>6,516</td><td>99%</td></tr>
-<tr><td>HaGeZi's Ultimate Blocklist</td><td>283,459</td><td>121,652</td><td>160,267</td><td>43%</td></tr>
-<tr><td>Phishing Army</td><td>151,279</td><td>33,979</td><td>94,107</td><td>27%</td></tr>
-<tr><td>Phishing URL Blocklist (PhishTank and OpenPhish)</td><td>39,676</td><td>14,617</td><td>21,122</td><td>41%</td></tr>
+      <tbody><tr><td>HaGeZi's Threat Intelligence Feeds</td><td>2,221,143</td><td>2,070,150</td><td>149,335</td><td>93%</td></tr>
+<tr><td>HaGeZi's Gambling Blocklist</td><td>531,619</td><td>525,085</td><td>6,501</td><td>99%</td></tr>
+<tr><td>HaGeZi's Ultimate Blocklist</td><td>279,954</td><td>119,622</td><td>158,803</td><td>43%</td></tr>
+<tr><td>Phishing Army</td><td>151,053</td><td>33,961</td><td>93,908</td><td>27%</td></tr>
 <tr><td>HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass</td><td>16,472</td><td>14,592</td><td>1,610</td><td>90%</td></tr>
-<tr><td>CHN: AdRules DNS List</td><td>201,226</td><td>11,097</td><td>186,223</td><td>6%</td></tr>
-<tr><td>CHN: anti-AD</td><td>100,836</td><td>7,615</td><td>92,478</td><td>8%</td></tr>
-<tr><td>AdGuard DNS filter</td><td>181,683</td><td>5,104</td><td>174,195</td><td>3%</td></tr>
-<tr><td>ShadowWhisperer's Dating List</td><td>1,384</td><td>1,266</td><td>109</td><td>92%</td></tr>
-<tr><td>Malicious URL Blocklist (URLHaus)</td><td>3,499</td><td>1,046</td><td>1,668</td><td>39%</td></tr>
+<tr><td>Phishing URL Blocklist (PhishTank and OpenPhish)</td><td>39,679</td><td>14,550</td><td>21,193</td><td>41%</td></tr>
+<tr><td>CHN: AdRules DNS List</td><td>201,361</td><td>11,091</td><td>186,360</td><td>6%</td></tr>
+<tr><td>CHN: anti-AD</td><td>100,836</td><td>7,614</td><td>92,479</td><td>8%</td></tr>
+<tr><td>AdGuard DNS filter</td><td>181,812</td><td>5,100</td><td>174,324</td><td>3%</td></tr>
+<tr><td>ShadowWhisperer's Dating List</td><td>1,385</td><td>1,267</td><td>109</td><td>92%</td></tr>
+<tr><td>Malicious URL Blocklist (URLHaus)</td><td>3,501</td><td>1,046</td><td>1,677</td><td>38%</td></tr>
 <tr><td>Stalkerware Indicators List</td><td>934</td><td>446</td><td>61</td><td>88%</td></tr>
-<tr><td>OISD Blocklist Small</td><td>57,144</td><td>97</td><td>55,569</td><td>0%</td></tr>
+<tr><td>OISD Blocklist Small</td><td>57,259</td><td>97</td><td>55,680</td><td>0%</td></tr>
 <tr><td>Scam Blocklist by DurableNapkin</td><td>941</td><td>4</td><td>925</td><td>0%</td></tr>
-<tr><td>NoCoin Filter List</td><td>321</td><td>3</td><td>266</td><td>1%</td></tr>
 <tr><td>HaGeZi's DNS Rebind Protection</td><td>25</td><td>3</td><td>0</td><td>100%</td></tr>
+<tr><td>NoCoin Filter List</td><td>321</td><td>3</td><td>266</td><td>1%</td></tr>
 <tr><td>HaGeZi's Windows/Office Tracker Blocklist</td><td>397</td><td>1</td><td>379</td><td>0%</td></tr>
 <tr><td>AWAvenue Ads Rule</td><td>907</td><td>0</td><td>742</td><td>0%</td></tr>
 </tbody>
@@ -107,26 +107,26 @@ tr:hover { background:#f8f9fa; }
     <p class="note">每对源共同拥有的规则数；覆盖率 = 重复数 / 该源去重后有效规则数。颜色：<span style="background:#f8d7da;padding:2px 8px;">≥80%</span> <span style="background:#fff3cd;padding:2px 8px;">≥50%</span> <span style="background:#d1ecf1;padding:2px 8px;">≥20%</span> <span style="background:#d4edda;padding:2px 8px;">&lt;20%</span></p>
     <table style="margin-top:12px;">
       <thead><tr><th>源 A</th><th>源 B</th><th>共同规则数</th><th>A 覆盖率</th><th>B 覆盖率</th></tr></thead>
-      <tbody><tr><td>AdGuard DNS filter</td><td>CHN: AdRules DNS List</td><td>166,485</td><td style='background:#f8d7da'>92.9%</td><td style='background:#f8d7da'>84.4%</td></tr>
-<tr><td>CHN: AdRules DNS List</td><td>HaGeZi's Ultimate Blocklist</td><td>87,842</td><td style='background:#d1ecf1'>44.5%</td><td style='background:#d1ecf1'>31.2%</td></tr>
-<tr><td>CHN: anti-AD</td><td>CHN: AdRules DNS List</td><td>86,534</td><td style='background:#f8d7da'>86.5%</td><td style='background:#d1ecf1'>43.9%</td></tr>
-<tr><td>AdGuard DNS filter</td><td>HaGeZi's Ultimate Blocklist</td><td>86,268</td><td style='background:#d1ecf1'>48.1%</td><td style='background:#d1ecf1'>30.6%</td></tr>
-<tr><td>Phishing Army</td><td>HaGeZi's Threat Intelligence Feeds</td><td>81,011</td><td style='background:#fff3cd'>63.2%</td><td style='background:#d4edda'>3.7%</td></tr>
+      <tbody><tr><td>AdGuard DNS filter</td><td>CHN: AdRules DNS List</td><td>166,613</td><td style='background:#f8d7da'>92.9%</td><td style='background:#f8d7da'>84.4%</td></tr>
+<tr><td>CHN: anti-AD</td><td>CHN: AdRules DNS List</td><td>86,534</td><td style='background:#f8d7da'>86.5%</td><td style='background:#d1ecf1'>43.8%</td></tr>
+<tr><td>CHN: AdRules DNS List</td><td>HaGeZi's Ultimate Blocklist</td><td>84,010</td><td style='background:#d1ecf1'>42.5%</td><td style='background:#d1ecf1'>30.2%</td></tr>
+<tr><td>AdGuard DNS filter</td><td>HaGeZi's Ultimate Blocklist</td><td>82,426</td><td style='background:#d1ecf1'>45.9%</td><td style='background:#d1ecf1'>29.6%</td></tr>
+<tr><td>Phishing Army</td><td>HaGeZi's Threat Intelligence Feeds</td><td>80,797</td><td style='background:#fff3cd'>63.2%</td><td style='background:#d4edda'>3.6%</td></tr>
 <tr><td>AdGuard DNS filter</td><td>CHN: anti-AD</td><td>77,261</td><td style='background:#d1ecf1'>43.1%</td><td style='background:#fff3cd'>77.2%</td></tr>
-<tr><td>HaGeZi's Threat Intelligence Feeds</td><td>HaGeZi's Ultimate Blocklist</td><td>61,896</td><td style='background:#d4edda'>2.8%</td><td style='background:#d1ecf1'>22.0%</td></tr>
-<tr><td>CHN: anti-AD</td><td>HaGeZi's Ultimate Blocklist</td><td>60,098</td><td style='background:#fff3cd'>60.0%</td><td style='background:#d1ecf1'>21.3%</td></tr>
-<tr><td>HaGeZi's Ultimate Blocklist</td><td>OISD Blocklist Small</td><td>55,427</td><td style='background:#d4edda'>19.7%</td><td style='background:#f8d7da'>99.6%</td></tr>
-<tr><td>CHN: AdRules DNS List</td><td>OISD Blocklist Small</td><td>52,131</td><td style='background:#d1ecf1'>26.4%</td><td style='background:#f8d7da'>93.6%</td></tr>
-<tr><td>AdGuard DNS filter</td><td>OISD Blocklist Small</td><td>51,532</td><td style='background:#d1ecf1'>28.7%</td><td style='background:#f8d7da'>92.6%</td></tr>
-<tr><td>CHN: anti-AD</td><td>OISD Blocklist Small</td><td>40,153</td><td style='background:#d1ecf1'>40.1%</td><td style='background:#fff3cd'>72.1%</td></tr>
-<tr><td>Phishing Army</td><td>Phishing URL Blocklist (PhishTank and OpenPhish)</td><td>20,136</td><td style='background:#d4edda'>15.7%</td><td style='background:#fff3cd'>56.3%</td></tr>
-<tr><td>Phishing Army</td><td>HaGeZi's Ultimate Blocklist</td><td>11,640</td><td style='background:#d4edda'>9.1%</td><td style='background:#d4edda'>4.1%</td></tr>
-<tr><td>Phishing URL Blocklist (PhishTank and OpenPhish)</td><td>HaGeZi's Threat Intelligence Feeds</td><td>7,915</td><td style='background:#d1ecf1'>22.1%</td><td style='background:#d4edda'>0.4%</td></tr>
-<tr><td>HaGeZi's Threat Intelligence Feeds</td><td>HaGeZi's Gambling Blocklist</td><td>5,275</td><td style='background:#d4edda'>0.2%</td><td style='background:#d4edda'>1.0%</td></tr>
-<tr><td>CHN: AdRules DNS List</td><td>HaGeZi's Threat Intelligence Feeds</td><td>5,204</td><td style='background:#d4edda'>2.6%</td><td style='background:#d4edda'>0.2%</td></tr>
-<tr><td>AdGuard DNS filter</td><td>HaGeZi's Threat Intelligence Feeds</td><td>3,774</td><td style='background:#d4edda'>2.1%</td><td style='background:#d4edda'>0.2%</td></tr>
-<tr><td>CHN: anti-AD</td><td>HaGeZi's Threat Intelligence Feeds</td><td>2,414</td><td style='background:#d4edda'>2.4%</td><td style='background:#d4edda'>0.1%</td></tr>
-<tr><td>HaGeZi's Threat Intelligence Feeds</td><td>OISD Blocklist Small</td><td>1,916</td><td style='background:#d4edda'>0.1%</td><td style='background:#d4edda'>3.4%</td></tr>
+<tr><td>HaGeZi's Threat Intelligence Feeds</td><td>HaGeZi's Ultimate Blocklist</td><td>69,990</td><td style='background:#d4edda'>3.2%</td><td style='background:#d1ecf1'>25.1%</td></tr>
+<tr><td>CHN: anti-AD</td><td>HaGeZi's Ultimate Blocklist</td><td>59,375</td><td style='background:#fff3cd'>59.3%</td><td style='background:#d1ecf1'>21.3%</td></tr>
+<tr><td>HaGeZi's Ultimate Blocklist</td><td>OISD Blocklist Small</td><td>55,495</td><td style='background:#d4edda'>19.9%</td><td style='background:#f8d7da'>99.5%</td></tr>
+<tr><td>CHN: AdRules DNS List</td><td>OISD Blocklist Small</td><td>52,239</td><td style='background:#d1ecf1'>26.5%</td><td style='background:#f8d7da'>93.7%</td></tr>
+<tr><td>AdGuard DNS filter</td><td>OISD Blocklist Small</td><td>51,640</td><td style='background:#d1ecf1'>28.8%</td><td style='background:#f8d7da'>92.6%</td></tr>
+<tr><td>CHN: anti-AD</td><td>OISD Blocklist Small</td><td>40,153</td><td style='background:#d1ecf1'>40.1%</td><td style='background:#fff3cd'>72.0%</td></tr>
+<tr><td>Phishing Army</td><td>Phishing URL Blocklist (PhishTank and OpenPhish)</td><td>20,226</td><td style='background:#d4edda'>15.8%</td><td style='background:#fff3cd'>56.6%</td></tr>
+<tr><td>Phishing Army</td><td>HaGeZi's Ultimate Blocklist</td><td>11,694</td><td style='background:#d4edda'>9.1%</td><td style='background:#d4edda'>4.2%</td></tr>
+<tr><td>CHN: AdRules DNS List</td><td>HaGeZi's Threat Intelligence Feeds</td><td>10,392</td><td style='background:#d4edda'>5.3%</td><td style='background:#d4edda'>0.5%</td></tr>
+<tr><td>AdGuard DNS filter</td><td>HaGeZi's Threat Intelligence Feeds</td><td>9,093</td><td style='background:#d4edda'>5.1%</td><td style='background:#d4edda'>0.4%</td></tr>
+<tr><td>Phishing URL Blocklist (PhishTank and OpenPhish)</td><td>HaGeZi's Threat Intelligence Feeds</td><td>7,970</td><td style='background:#d1ecf1'>22.3%</td><td style='background:#d4edda'>0.4%</td></tr>
+<tr><td>HaGeZi's Threat Intelligence Feeds</td><td>OISD Blocklist Small</td><td>6,862</td><td style='background:#d4edda'>0.3%</td><td style='background:#d4edda'>12.3%</td></tr>
+<tr><td>CHN: anti-AD</td><td>HaGeZi's Threat Intelligence Feeds</td><td>6,487</td><td style='background:#d4edda'>6.5%</td><td style='background:#d4edda'>0.3%</td></tr>
+<tr><td>HaGeZi's Threat Intelligence Feeds</td><td>HaGeZi's Gambling Blocklist</td><td>5,282</td><td style='background:#d4edda'>0.2%</td><td style='background:#d4edda'>1.0%</td></tr>
 </tbody>
     </table>
   </div>
@@ -138,37 +138,38 @@ tr:hover { background:#f8f9fa; }
       <thead><tr><th>域名</th><th>被拦规则</th><th>被拦来源</th><th>白名单规则</th><th>白名单来源</th><th>类型</th></tr></thead>
       <tbody><tr><td><code>googleadservices.com</code></td><td><code>||googleadservices.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist, OISD Blocklist Small, AWAvenue Ads Rule</td><td><code>@@||googleadservices.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>proto2ad.durasite.net</code></td><td><code>||proto2ad.durasite.net^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist, OISD Blocklist Small</td><td><code>@@||proto2ad.durasite.net^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>jdoqocy.com</code></td><td><code>||jdoqocy.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||jdoqocy.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>afi-b.com</code></td><td><code>||afi-b.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, HaGeZi's Ultimate Blocklist</td><td><code>@@||afi-b.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>awin1.com</code></td><td><code>||awin1.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||awin1.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>logentries.com</code></td><td><code>||logentries.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, HaGeZi's Ultimate Blocklist</td><td><code>@@||logentries.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>omsc.kpn.com</code></td><td><code>||omsc.kpn.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||omsc.kpn.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>om-ssl.consorsbank.de</code></td><td><code>||om-ssl.consorsbank.de^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||om-ssl.consorsbank.de^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>data.digital.costco.ca</code></td><td><code>||data.digital.costco.ca^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||data.digital.costco.ca^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>data.digital.costco.com</code></td><td><code>||data.digital.costco.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||data.digital.costco.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>data.orders.costco.com</code></td><td><code>||data.orders.costco.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||data.orders.costco.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>datadoghq-browser-agent.com</code></td><td><code>||datadoghq-browser-agent.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||datadoghq-browser-agent.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>marketing.net.idealo-partner.com</code></td><td><code>||marketing.net.idealo-partner.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||marketing.net.idealo-partner.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>jdoqocy.com</code></td><td><code>||jdoqocy.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||jdoqocy.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>omsc.kpn.com</code></td><td><code>||omsc.kpn.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||omsc.kpn.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>torimochi.line-apps.com</code></td><td><code>||torimochi.line-apps.com^</code></td><td>CHN: anti-AD</td><td><code>@@||torimochi.line-apps.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>logentries.com</code></td><td><code>||logentries.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, HaGeZi's Ultimate Blocklist</td><td><code>@@||logentries.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>sedge.nfl.com</code></td><td><code>||sedge.nfl.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||sedge.nfl.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>cmp.osano.com</code></td><td><code>||cmp.osano.com^</code></td><td>CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||cmp.osano.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>data.promo.timhortons.ca</code></td><td><code>||data.promo.timhortons.ca^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||data.promo.timhortons.ca^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>data.notify.macys.com</code></td><td><code>||data.notify.macys.com^</code></td><td>AdGuard DNS filter, CHN: AdRules DNS List</td><td><code>@@||data.notify.macys.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>data.orders.costco.ca</code></td><td><code>||data.orders.costco.ca^</code></td><td>AdGuard DNS filter, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||data.orders.costco.ca^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>data.orders.costco.com</code></td><td><code>||data.orders.costco.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||data.orders.costco.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>data.promo.timhortons.ca</code></td><td><code>||data.promo.timhortons.ca^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||data.promo.timhortons.ca^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>sedge.nfl.com</code></td><td><code>||sedge.nfl.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||sedge.nfl.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>om-ssl.consorsbank.de</code></td><td><code>||om-ssl.consorsbank.de^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||om-ssl.consorsbank.de^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>omniture.walmart.com</code></td><td><code>||omniture.walmart.com^</code></td><td>AdGuard DNS filter, CHN: AdRules DNS List</td><td><code>@@||omniture.walmart.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>swasc.homedepot.com</code></td><td><code>||swasc.homedepot.com^</code></td><td>AdGuard DNS filter, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||swasc.homedepot.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>tms.capitalone.com</code></td><td><code>||tms.capitalone.com^</code></td><td>AdGuard DNS filter</td><td><code>@@||tms.capitalone.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>marketing.net.idealo-partner.com</code></td><td><code>||marketing.net.idealo-partner.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||marketing.net.idealo-partner.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>belgium.wolterskluwer.com</code></td><td><code>||belgium.wolterskluwer.com^</code></td><td>AdGuard DNS filter, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||belgium.wolterskluwer.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>afi-b.com</code></td><td><code>||afi-b.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, HaGeZi's Ultimate Blocklist</td><td><code>@@||afi-b.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>hb.afl.rakuten.co.jp</code></td><td><code>||hb.afl.rakuten.co.jp^</code></td><td>AdGuard DNS filter</td><td><code>@@||hb.afl.rakuten.co.jp^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>statcounter.com</code></td><td><code>||statcounter.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist, OISD Blocklist Small</td><td><code>@@||statcounter.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>datadoghq-browser-agent.com</code></td><td><code>||datadoghq-browser-agent.com^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist</td><td><code>@@||datadoghq-browser-agent.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>torimochi.line-apps.com</code></td><td><code>||torimochi.line-apps.com^</code></td><td>CHN: anti-AD</td><td><code>@@||torimochi.line-apps.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>cmp.osano.com</code></td><td><code>||cmp.osano.com^</code></td><td>CHN: anti-AD, CHN: AdRules DNS List</td><td><code>@@||cmp.osano.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>ad.10010.com</code></td><td><code>||ad.10010.com^</code></td><td>CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist, OISD Blocklist Small, AWAvenue Ads Rule</td><td><code>@@||ad.10010.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>ad.ourgame.com</code></td><td><code>||ad.ourgame.com^</code></td><td>CHN: AdRules DNS List</td><td><code>@@||ad.ourgame.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>sax.sina.com.cn</code></td><td><code>||sax.sina.com.cn^</code></td><td>AdGuard DNS filter, CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist, OISD Blocklist Small</td><td><code>@@||sax.sina.com.cn^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
+<tr><td><code>aax-fe.amazon.co.jp</code></td><td><code>||aax-fe.amazon.co.jp^</code></td><td>HaGeZi's Ultimate Blocklist</td><td><code>@@||aax-fe.amazon.co.jp^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>stats.tj.gov.cn</code></td><td><code>||stats.tj.gov.cn^</code></td><td>HaGeZi's Ultimate Blocklist</td><td><code>@@||tj.gov.cn^</code></td><td>CHN: anti-AD</td><td><span class='tag tag-yellow'>级联</span></td></tr>
 <tr><td><code>api.karte.io</code></td><td><code>||api.karte.io^</code></td><td>HaGeZi's Ultimate Blocklist</td><td><code>@@||api.karte.io^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>settings-win.data.microsoft.com</code></td><td><code>||settings-win.data.microsoft.com^</code></td><td>HaGeZi's Ultimate Blocklist</td><td><code>@@||settings-win.data.microsoft.com^</code></td><td>CHN: anti-AD</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 <tr><td><code>global.api.huangye.miui.com</code></td><td><code>||global.api.huangye.miui.com^</code></td><td>HaGeZi's Ultimate Blocklist</td><td><code>@@||api.huangye.miui.com^</code></td><td>CHN: anti-AD</td><td><span class='tag tag-yellow'>级联</span></td></tr>
 <tr><td><code>ads.privacy.qq.com</code></td><td><code>||ads.privacy.qq.com^</code></td><td>HaGeZi's Ultimate Blocklist</td><td><code>@@||ads.privacy.qq.com^</code></td><td>CHN: anti-AD</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>ad.10010.com</code></td><td><code>||ad.10010.com^</code></td><td>CHN: anti-AD, CHN: AdRules DNS List, HaGeZi's Ultimate Blocklist, OISD Blocklist Small, AWAvenue Ads Rule</td><td><code>@@||ad.10010.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
-<tr><td><code>ad.ourgame.com</code></td><td><code>||ad.ourgame.com^</code></td><td>CHN: AdRules DNS List</td><td><code>@@||ad.ourgame.com^</code></td><td>AdGuard DNS filter</td><td><span class='tag tag-yellow'>精确</span></td></tr>
 </tbody>
     </table>
   </div>
@@ -178,18 +179,18 @@ tr:hover { background:#f8f9fa; }
     <p class="note">有效规则数 = 去重后该源仍覆盖的规则数；自去重率 = 1 - 有效/原始，反映该源内部及与其他源的重复程度。</p>
     <table style="margin-top:12px;">
       <thead><tr><th>源</th><th>原始规则</th><th>去重后有效</th><th>自去重率</th></tr></thead>
-      <tbody><tr><td>HaGeZi's Threat Intelligence Feeds</td><td>2,204,702</td><td>2,203,093</td><td>0.1%</td></tr>
-<tr><td>HaGeZi's Gambling Blocklist</td><td>531,612</td><td>531,579</td><td>0.0%</td></tr>
-<tr><td>HaGeZi's Ultimate Blocklist</td><td>283,459</td><td>281,919</td><td>0.5%</td></tr>
-<tr><td>CHN: AdRules DNS List</td><td>201,226</td><td>197,320</td><td>1.9%</td></tr>
-<tr><td>AdGuard DNS filter</td><td>181,683</td><td>179,299</td><td>1.3%</td></tr>
-<tr><td>Phishing Army</td><td>151,279</td><td>128,086</td><td>15.3%</td></tr>
+      <tbody><tr><td>HaGeZi's Threat Intelligence Feeds</td><td>2,221,143</td><td>2,219,485</td><td>0.1%</td></tr>
+<tr><td>HaGeZi's Gambling Blocklist</td><td>531,619</td><td>531,586</td><td>0.0%</td></tr>
+<tr><td>HaGeZi's Ultimate Blocklist</td><td>279,954</td><td>278,425</td><td>0.5%</td></tr>
+<tr><td>CHN: AdRules DNS List</td><td>201,361</td><td>197,451</td><td>1.9%</td></tr>
+<tr><td>AdGuard DNS filter</td><td>181,812</td><td>179,424</td><td>1.3%</td></tr>
+<tr><td>Phishing Army</td><td>151,053</td><td>127,869</td><td>15.3%</td></tr>
 <tr><td>CHN: anti-AD</td><td>100,836</td><td>100,093</td><td>0.7%</td></tr>
-<tr><td>OISD Blocklist Small</td><td>57,144</td><td>55,666</td><td>2.6%</td></tr>
-<tr><td>Phishing URL Blocklist (PhishTank and OpenPhish)</td><td>39,676</td><td>35,739</td><td>9.9%</td></tr>
+<tr><td>OISD Blocklist Small</td><td>57,259</td><td>55,777</td><td>2.6%</td></tr>
+<tr><td>Phishing URL Blocklist (PhishTank and OpenPhish)</td><td>39,679</td><td>35,743</td><td>9.9%</td></tr>
 <tr><td>HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass</td><td>16,472</td><td>16,202</td><td>1.6%</td></tr>
-<tr><td>Malicious URL Blocklist (URLHaus)</td><td>3,499</td><td>2,714</td><td>22.4%</td></tr>
-<tr><td>ShadowWhisperer's Dating List</td><td>1,384</td><td>1,375</td><td>0.7%</td></tr>
+<tr><td>Malicious URL Blocklist (URLHaus)</td><td>3,501</td><td>2,723</td><td>22.2%</td></tr>
+<tr><td>ShadowWhisperer's Dating List</td><td>1,385</td><td>1,376</td><td>0.6%</td></tr>
 <tr><td>Scam Blocklist by DurableNapkin</td><td>941</td><td>929</td><td>1.3%</td></tr>
 <tr><td>AWAvenue Ads Rule</td><td>907</td><td>742</td><td>18.2%</td></tr>
 <tr><td>Stalkerware Indicators List</td><td>934</td><td>507</td><td>45.7%</td></tr>
@@ -213,28 +214,28 @@ tr:hover { background:#f8f9fa; }
   <div class="section">
     <h2>🛡️ 白名单多层防御审计</h2>
     <p class="note">七层防御体系：DNS解析 → URLhaus/ThreatFox威胁情报 → RDAP域名年龄 → MarketNow诈骗检测 → VirusTotal(可选) → 离线PSL分类 → AI语义分类(可选)。<span class="tag tag-red">🔴 恶意</span> 建议移除此白名单；<span class="tag tag-yellow">🟡 可疑</span> 需人工确认；<span class="tag tag-green">🟢 安全</span> 可放心放行。需在配置中启用 <code>whitelist_audit.enabled</code>。</p>
-    <div class='stats-grid' style='margin:15px 0'><div class='stat-card'><div class='value'>0</div><div class='label'>🔴 恶意</div></div><div class='stat-card'><div class='value'>27</div><div class='label'>🟡 可疑</div></div><div class='stat-card'><div class='value'>183</div><div class='label'>🟢 安全</div></div><div class='stat-card'><div class='value'>15</div><div class='label'>⚪ 未知</div></div></div>
+    <div class='stats-grid' style='margin:15px 0'><div class='stat-card'><div class='value'>0</div><div class='label'>🔴 恶意</div></div><div class='stat-card'><div class='value'>28</div><div class='label'>🟡 可疑</div></div><div class='stat-card'><div class='value'>184</div><div class='label'>🟢 安全</div></div><div class='stat-card'><div class='value'>14</div><div class='label'>⚪ 未知</div></div></div>
     <h3 style='margin:20px 0 10px'>🏗️ 防御层概览</h3><table><thead><tr><th>层级</th><th>检测内容</th><th>状态</th><th>成本</th><th>命中数</th></tr></thead><tbody><tr><td>DNS 解析</td><td>NXDOMAIN/私有IP检测</td><td><span class='tag tag-green'>✅ 启用</span></td><td>免费</td><td>13</td></tr>
 <tr><td>URLhaus</td><td>恶意软件分发域名</td><td><span class='tag tag-green'>✅ 启用</span></td><td>免费</td><td>0</td></tr>
 <tr><td>ThreatFox</td><td>C2 命令控制域名</td><td><span class='tag tag-green'>✅ 启用</span></td><td>免费</td><td>0</td></tr>
 <tr><td>RDAP 域名年龄</td><td>新注册域名<30天标记</td><td><span class='tag tag-green'>✅ 启用</span></td><td>免费</td><td>0</td></tr>
-<tr><td>MarketNow 诈骗检测</td><td>拼写劫持/可疑TLD/未注册</td><td><span class='tag tag-green'>✅ 启用</span></td><td>免费</td><td>14</td></tr>
+<tr><td>MarketNow 诈骗检测</td><td>拼写劫持/可疑TLD/未注册</td><td><span class='tag tag-green'>✅ 启用</span></td><td>免费</td><td>15</td></tr>
 <tr><td>VirusTotal</td><td>多引擎厂商信誉</td><td><span class='tag tag-blue'>⬜ 未启用</span></td><td>需API Key</td><td>-</td></tr>
 <tr><td>AI/LLM 分类</td><td>低置信度域名语义分类</td><td><span class='tag tag-blue'>⬜ 未启用</span></td><td>需API Key</td><td>-</td></tr>
 </tbody></table>
     <h3 style='margin:20px 0 10px'>📂 白名单域名类别分布</h3><table><thead><tr><th>类别</th><th>数量</th><th>占比</th><th>百分比</th></tr></thead><tbody><tr><td>广告/营销</td><td>18</td><td><div class='bar-bg'><div class='bar-fill' style='width:8.0%'></div></div></td><td>8.0%</td></tr>
 <tr><td>分析/追踪</td><td>9</td><td><div class='bar-bg'><div class='bar-fill' style='width:4.0%'></div></div></td><td>4.0%</td></tr>
-<tr><td>CDN/基础设施</td><td>8</td><td><div class='bar-bg'><div class='bar-fill' style='width:3.6%'></div></div></td><td>3.6%</td></tr>
+<tr><td>CDN/基础设施</td><td>8</td><td><div class='bar-bg'><div class='bar-fill' style='width:3.5%'></div></div></td><td>3.5%</td></tr>
 <tr><td>微软/Windows 遥测</td><td>12</td><td><div class='bar-bg'><div class='bar-fill' style='width:5.3%'></div></div></td><td>5.3%</td></tr>
-<tr><td>联盟营销/跳转</td><td>22</td><td><div class='bar-bg'><div class='bar-fill' style='width:9.8%'></div></div></td><td>9.8%</td></tr>
+<tr><td>联盟营销/跳转</td><td>23</td><td><div class='bar-bg'><div class='bar-fill' style='width:10.2%'></div></div></td><td>10.2%</td></tr>
 <tr><td>社交/分享</td><td>4</td><td><div class='bar-bg'><div class='bar-fill' style='width:1.8%'></div></div></td><td>1.8%</td></tr>
 <tr><td>电商/支付</td><td>10</td><td><div class='bar-bg'><div class='bar-fill' style='width:4.4%'></div></div></td><td>4.4%</td></tr>
 <tr><td>隐私/安全</td><td>1</td><td><div class='bar-bg'><div class='bar-fill' style='width:0.4%'></div></div></td><td>0.4%</td></tr>
-<tr><td>其他</td><td>141</td><td><div class='bar-bg'><div class='bar-fill' style='width:62.7%'></div></div></td><td>62.7%</td></tr>
+<tr><td>其他</td><td>141</td><td><div class='bar-bg'><div class='bar-fill' style='width:62.4%'></div></div></td><td>62.4%</td></tr>
 </tbody></table>
-    <h3 style='margin:20px 0 10px'>🎯 分类置信度分布</h3><p class='note' style='margin:5px 0'>高置信度=注册域名精确匹配(PSL)，可直接信任；中置信度=子域名前缀匹配，建议人工确认；低置信度=无法分类，需外部API或人工判断。</p><table><thead><tr><th>置信度等级</th><th>数量</th><th>占比</th><th>百分比</th></tr></thead><tbody><tr><td>高置信度 (注册域名匹配)</td><td>48</td><td><div class='bar-bg'><div class='bar-fill' style='width:21.3%'></div></div></td><td>21.3%</td></tr>
-<tr><td>中置信度 (子域名前缀)</td><td>36</td><td><div class='bar-bg'><div class='bar-fill' style='width:16.0%'></div></div></td><td>16.0%</td></tr>
-<tr><td>低置信度 (无法分类)</td><td>141</td><td><div class='bar-bg'><div class='bar-fill' style='width:62.7%'></div></div></td><td>62.7%</td></tr>
+    <h3 style='margin:20px 0 10px'>🎯 分类置信度分布</h3><p class='note' style='margin:5px 0'>高置信度=注册域名精确匹配(PSL)，可直接信任；中置信度=子域名前缀匹配，建议人工确认；低置信度=无法分类，需外部API或人工判断。</p><table><thead><tr><th>置信度等级</th><th>数量</th><th>占比</th><th>百分比</th></tr></thead><tbody><tr><td>高置信度 (注册域名匹配)</td><td>49</td><td><div class='bar-bg'><div class='bar-fill' style='width:21.7%'></div></div></td><td>21.7%</td></tr>
+<tr><td>中置信度 (子域名前缀)</td><td>36</td><td><div class='bar-bg'><div class='bar-fill' style='width:15.9%'></div></div></td><td>15.9%</td></tr>
+<tr><td>低置信度 (无法分类)</td><td>141</td><td><div class='bar-bg'><div class='bar-fill' style='width:62.4%'></div></div></td><td>62.4%</td></tr>
 </tbody></table>
     <h3 style="margin:20px 0 10px">🔍 逐条审计详情</h3>
     <table>
@@ -242,8 +243,9 @@ tr:hover { background:#f8f9fa; }
       <tbody><tr><td><code>5471782.fls.doubleclick.net</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>广告/营销</td><td><span class='tag tag-green'>0.90</span></td><td>诈骗/钓鱼检测 [CAUTION, 风险分35]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Long numeric sequence</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>79423.analytics.edgekey.net</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>CDN/基础设施</td><td><span class='tag tag-green'>0.90</span></td><td>诈骗/钓鱼检测 [SUSPICIOUS, 风险分55]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Long numeric sequence</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>a.adwolf.ru</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>广告/营销</td><td><span class='tag tag-green'>0.90</span></td><td>DNS NXDOMAIN（域名已过期，白名单可能无效）</td><td>AdGuard DNS filter</td></tr>
+<tr><td><code>aax-fe.amazon.co.jp</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>联盟营销/跳转</td><td><span class='tag tag-green'>0.90</span></td><td>诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Brand "amazon" appears in subdomain but root domain is different</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>ad.10010.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>广告/营销</td><td><span class='tag tag-yellow'>0.60</span></td><td>诈骗/钓鱼检测 [CAUTION, 风险分35]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Long numeric sequence</td><td>AdGuard DNS filter</td></tr>
-<tr><td><code>ad.cityu.edu.hk</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>广告/营销</td><td><span class='tag tag-yellow'>0.60</span></td><td>解析到私有/回环 IP: ['172.26.255.2', '172.26.255.11', '172.26.255.1', '172.26.255.12']</td><td>CHN: anti-AD</td></tr>
+<tr><td><code>ad.cityu.edu.hk</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>广告/营销</td><td><span class='tag tag-yellow'>0.60</span></td><td>解析到私有/回环 IP: ['172.26.255.1', '172.26.255.11', '172.26.255.12', '172.26.255.2']</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>ads.tdbank.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>广告/营销</td><td><span class='tag tag-yellow'>0.60</span></td><td>DNS NXDOMAIN（域名已过期，白名单可能无效）</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>ap01.records.in.treasuredata.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Deep subdomain chain (5 levels): common in phishing</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>clickattr.wayup.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>诈骗/钓鱼检测 [CAUTION, 风险分30]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; SSL certificate does not cover "clickattr.wayup.com" (CN/SAN mismatch) — possible misconfiguration or MITM</td><td>AdGuard DNS filter</td></tr>
@@ -252,7 +254,7 @@ tr:hover { background:#f8f9fa; }
 <tr><td><code>edge.activity.windows.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>微软/Windows 遥测</td><td><span class='tag tag-green'>0.90</span></td><td>解析到私有/回环 IP: ['127.0.0.1']</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>email.procook.co.uk</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS NXDOMAIN（域名已过期，白名单可能无效）</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>fritz.nas</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS NXDOMAIN（域名已过期，白名单可能无效）</td><td>HaGeZi's DNS Rebind Protection</td></tr>
-<tr><td><code>grp07.ias.rakuten.co.jp</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Deep subdomain chain (5 levels): common in phishing</td><td>AdGuard DNS filter</td></tr>
+<tr><td><code>grp07.ias.rakuten.co.jp</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>诈骗/钓鱼检测 [CAUTION, 风险分30]: Deep subdomain chain (5 levels): common in phishing</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>guce.advertising.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>广告/营销</td><td><span class='tag tag-green'>0.90</span></td><td>DNS NXDOMAIN（域名已过期，白名单可能无效）</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>hb.afl.rakuten.co.jp</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>诈骗/钓鱼检测 [CAUTION, 风险分30]: Deep subdomain chain (5 levels): common in phishing</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>links.e.theatlantic.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>联盟营销/跳转</td><td><span class='tag tag-yellow'>0.60</span></td><td>诈骗/钓鱼检测 [CAUTION, 风险分30]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; SSL certificate does not cover "links.e.theatlantic.com" (CN/SAN mismatch) — possible misconfiguration or MITM</td><td>AdGuard DNS filter</td></tr>
@@ -263,14 +265,13 @@ tr:hover { background:#f8f9fa; }
 <tr><td><code>pt.afl.rakuten.co.jp</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Deep subdomain chain (5 levels): common in phishing</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>s.mvconf.f.360.cn</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Deep subdomain chain (5 levels): common in phishing</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>sponsor.nitropay.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS NXDOMAIN（域名已过期，白名单可能无效）</td><td>AdGuard DNS filter</td></tr>
-<tr><td><code>stat.jseea.cn</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>分析/追踪</td><td><span class='tag tag-yellow'>0.60</span></td><td>诈骗/钓鱼检测 [CAUTION, 风险分30]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; SSL certificate does not cover "stat.jseea.cn" (CN/SAN mismatch) — possible misconfiguration or MITM</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>thumbnail.thench.net</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS NXDOMAIN（域名已过期，白名单可能无效）</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>tlaol.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS NXDOMAIN（域名已过期，白名单可能无效）</td><td>AdGuard DNS filter</td></tr>
+<tr><td><code>torimochi.line-apps.com</code></td><td><span class='tag tag-yellow'>🟡 可疑</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>诈骗/钓鱼检测 [CAUTION, 风险分25]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; SSL valid but expires in 6 day(s) (issuer: GlobalSign nv-sa) — verified live server-side</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>ad.abchina.com</code></td><td><span class='tag tag-blue'>⚪ 未知</span></td><td>广告/营销</td><td><span class='tag tag-yellow'>0.60</span></td><td>检测不完整：DNS 查询失败 ([Errno -5] No address associated with hostname)，威胁情报无有效命中</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>ad.azure.com</code></td><td><span class='tag tag-blue'>⚪ 未知</span></td><td>微软/Windows 遥测</td><td><span class='tag tag-green'>0.90</span></td><td>检测不完整：DNS 查询失败 ([Errno -5] No address associated with hostname)，威胁情报无有效命中</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>adcdn.pingan.com</code></td><td><span class='tag tag-blue'>⚪ 未知</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>检测不完整：DNS 查询失败 ([Errno -5] No address associated with hostname)，威胁情报无有效命中</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>analysis.windows.net</code></td><td><span class='tag tag-blue'>⚪ 未知</span></td><td>微软/Windows 遥测</td><td><span class='tag tag-green'>0.90</span></td><td>检测不完整：DNS 查询失败 ([Errno -5] No address associated with hostname)，威胁情报无有效命中</td><td>CHN: anti-AD</td></tr>
-<tr><td><code>baozhang.baidu.com</code></td><td><span class='tag tag-blue'>⚪ 未知</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>检测不完整：DNS 查询失败 (timeout)，威胁情报无有效命中</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>buyad.bi-xenon.cn</code></td><td><span class='tag tag-blue'>⚪ 未知</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>检测不完整：DNS 查询失败 ([Errno -5] No address associated with hostname)，威胁情报无有效命中</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>datadoghq-browser-agent.com</code></td><td><span class='tag tag-blue'>⚪ 未知</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>检测不完整：DNS 查询失败 ([Errno -5] No address associated with hostname)，威胁情报无有效命中</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>dxcloud.episerver.net</code></td><td><span class='tag tag-blue'>⚪ 未知</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>检测不完整：DNS 查询失败 ([Errno -5] No address associated with hostname)，威胁情报无有效命中</td><td>CHN: anti-AD</td></tr>
@@ -313,6 +314,7 @@ tr:hover { background:#f8f9fa; }
 <tr><td><code>artifactory.appodeal.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>autocomplete.clearbit.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>awin1.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>联盟营销/跳转</td><td><span class='tag tag-green'>0.90</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
+<tr><td><code>baozhang.baidu.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>belgium.wolterskluwer.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>c.office.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>微软/Windows 遥测</td><td><span class='tag tag-green'>0.90</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>captcha.su.baidu.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
@@ -437,6 +439,7 @@ tr:hover { background:#f8f9fa; }
 <tr><td><code>smtp.focusgroupresearch.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>ssai.aniview.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>stash.roistat.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
+<tr><td><code>stat.jseea.cn</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>分析/追踪</td><td><span class='tag tag-yellow'>0.60</span></td><td>DNS 正常解析，无威胁情报标记</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>statcounter.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>分析/追踪</td><td><span class='tag tag-green'>0.90</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>stats.uptimerobot.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>分析/追踪</td><td><span class='tag tag-yellow'>0.60</span></td><td>DNS 正常解析，无威胁情报标记</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>storage.live.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>微软/Windows 遥测</td><td><span class='tag tag-green'>0.90</span></td><td>DNS 正常解析，无威胁情报标记</td><td>CHN: anti-AD</td></tr>
@@ -450,7 +453,6 @@ tr:hover { background:#f8f9fa; }
 <tr><td><code>tj.gov.cn</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>CHN: anti-AD</td></tr>
 <tr><td><code>tlh.gedidigital.it</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>tms.capitalone.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
-<tr><td><code>torimochi.line-apps.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>tr.rdrtr.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>track.rutarget.ru</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>其他</td><td><span class='tag tag-blue'>0.00</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
 <tr><td><code>track.webgains.com</code></td><td><span class='tag tag-green'>🟢 安全</span></td><td>联盟营销/跳转</td><td><span class='tag tag-green'>0.90</span></td><td>DNS 正常解析，无威胁情报标记</td><td>AdGuard DNS filter</td></tr>
@@ -473,9 +475,9 @@ tr:hover { background:#f8f9fa; }
     <table>
       <thead><tr><th>规则类型</th><th>语法示例</th><th>状态</th><th>处理方式</th><th>数量</th></tr></thead>
       <tbody>
-        <tr><td>Block 域名</td><td><code>||example.com^</code></td><td><span class="tag tag-green">✅ 支持</span></td><td>核心输出</td><td>3,147,106</td></tr>
+        <tr><td>Block 域名</td><td><code>||example.com^</code></td><td><span class="tag tag-green">✅ 支持</span></td><td>核心输出</td><td>3,155,821</td></tr>
         <tr><td>通配符</td><td><code>||*.example.com^</code></td><td><span class="tag tag-green">✅ 支持</span></td><td>聚合覆盖子域</td><td>1</td></tr>
-        <tr><td>Allow 白名单</td><td><code>@@||example.com^</code></td><td><span class="tag tag-green">✅ 支持</span></td><td>分离到 whitelist.txt</td><td>226</td></tr>
+        <tr><td>Allow 白名单</td><td><code>@@||example.com^</code></td><td><span class="tag tag-green">✅ 支持</span></td><td>分离到 whitelist.txt</td><td>227</td></tr>
         <tr><td>正则</td><td><code>/ads.*/</code></td><td><span class="tag tag-blue">✅ 保留</span></td><td>原样保留</td><td>63</td></tr>
         <tr><td>IP 规则</td><td><code>||8.8.8.8^</code></td><td><span class="tag tag-blue">✅ 支持</span></td><td>按域名字符串处理</td><td>72</td></tr>
         <tr><td>Hosts</td><td><code>0.0.0.0 example.com</code></td><td><span class="tag tag-green">✅ 支持</span></td><td>转换为 ||domain^</td><td>-</td></tr>
@@ -488,11 +490,11 @@ tr:hover { background:#f8f9fa; }
   <div class="two-col">
     <div class="section"><h2>⚡ 性能指标</h2>
       <table>
-        <tr><td>总耗时</td><td><strong>79.5s</strong></td></tr>
+        <tr><td>总耗时</td><td><strong>78.5s</strong></td></tr>
         <tr><td>源成功率</td><td>18/18</td></tr>
-        <tr><td>缓存命中</td><td>18</td></tr>
-        <tr><td>精确去重</td><td>584,168</td></tr>
-        <tr><td>规范化去重</td><td>4,828</td></tr>
+        <tr><td>缓存命中</td><td>8</td></tr>
+        <tr><td>精确去重</td><td>588,329</td></tr>
+        <tr><td>规范化去重</td><td>5,037</td></tr>
         <tr><td>正则去重</td><td>0</td></tr>
         <tr><td>本次新增域名</td><td>0</td></tr>
         <tr><td>本次移除域名</td><td>0</td></tr>
@@ -507,20 +509,20 @@ tr:hover { background:#f8f9fa; }
     </div>
   </div>
 
-  <div class="footer">AdGuard Rules Merger V5 · 自动生成 · 2026-09-23</div>
+  <div class="footer">AdGuard Rules Merger V5 · 自动生成 · 2026-09-24</div>
 </div>
 <script>
 const ruleTypeChart = echarts.init(document.getElementById('ruleTypeChart'));
 ruleTypeChart.setOption({ tooltip:{trigger:'item'}, legend:{bottom:0},
   series:[{ type:'pie', radius:['40%','70%'],
     data:[
-      {value:3147106,name:'普通域名',itemStyle:{color:'#3282b8'}},
+      {value:3155821,name:'普通域名',itemStyle:{color:'#3282b8'}},
       {value:1,name:'通配符',itemStyle:{color:'#6ab04c'}},
       {value:63,name:'正则',itemStyle:{color:'#f0932b'}},
       {value:72,name:'IP',itemStyle:{color:'#eb4d4b'}}
     ], label:{formatter:'{b}\n{d}%'} }] });
 const categoryChart = echarts.init(document.getElementById('categoryChart'));
-const catData = {"malware": 2204689, "ads": 338939, "phishing": 61920, "other": 540921, "mining": 167, "tracking": 380};
+const catData = {"malware": 2221082, "ads": 331306, "phishing": 61851, "other": 540944, "mining": 167, "tracking": 380};
 categoryChart.setOption({ tooltip:{trigger:'axis'},
   grid:{left:'3%',right:'4%',bottom:'3%',containLabel:true},
   xAxis:{type:'category',data:Object.keys(catData),axisLabel:{rotate:30}},
@@ -532,7 +534,7 @@ suffixChart.setOption({ tooltip:{trigger:'axis'},
   grid:{left:'3%',right:'4%',bottom:'3%',containLabel:true},
   xAxis:{type:'value'},
   yAxis:{type:'category',data:["za.com", "biz.id", "appspot.com", "framer.app", "my.id", "vercel.app", "ru.com", "sa.com", "run.app", "r2.dev", "pages.dev", "eu.cc", "firebaseapp.com", "amazonaws.com", "web.app", "wixstudio.com", "hl.cn", "cloudfront.net", "weebly.com", "fbcdn.net"]},
-  series:[{type:'bar',data:[718, 793, 841, 939, 995, 1013, 1083, 1196, 1211, 1770, 1844, 1895, 1994, 2021, 2067, 2256, 2636, 3482, 4616, 6760],itemStyle:{color:'#3282b8'}}] });
+  series:[{type:'bar',data:[717, 793, 842, 938, 995, 1013, 1083, 1196, 1211, 1771, 1844, 1898, 1994, 2021, 2067, 2256, 2636, 3482, 4616, 6760],itemStyle:{color:'#3282b8'}}] });
 window.addEventListener('resize',()=>{ruleTypeChart.resize();categoryChart.resize();suffixChart.resize();});
 </script>
 </body>
