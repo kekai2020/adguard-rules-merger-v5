@@ -261,6 +261,19 @@
     "conflict_type": "exact"
   },
   {
+    "domain": "hb.afl.rakuten.co.jp",
+    "blocked_rule": "||hb.afl.rakuten.co.jp^",
+    "blocked_category": "ads",
+    "blocked_sources": [
+      "AdGuard DNS filter"
+    ],
+    "whitelist_rule": "@@||hb.afl.rakuten.co.jp^",
+    "whitelist_sources": [
+      "AdGuard DNS filter"
+    ],
+    "conflict_type": "exact"
+  },
+  {
     "domain": "data.notify.macys.com",
     "blocked_rule": "||data.notify.macys.com^",
     "blocked_category": "ads",
@@ -337,23 +350,9 @@
     "blocked_category": "ads",
     "blocked_sources": [
       "AdGuard DNS filter",
-      "CHN: AdRules DNS List",
-      "HaGeZi's Ultimate Blocklist"
+      "CHN: AdRules DNS List"
     ],
     "whitelist_rule": "@@||belgium.wolterskluwer.com^",
-    "whitelist_sources": [
-      "AdGuard DNS filter"
-    ],
-    "conflict_type": "exact"
-  },
-  {
-    "domain": "hb.afl.rakuten.co.jp",
-    "blocked_rule": "||hb.afl.rakuten.co.jp^",
-    "blocked_category": "ads",
-    "blocked_sources": [
-      "AdGuard DNS filter"
-    ],
-    "whitelist_rule": "@@||hb.afl.rakuten.co.jp^",
     "whitelist_sources": [
       "AdGuard DNS filter"
     ],
