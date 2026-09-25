@@ -1,27 +1,27 @@
 # AdGuard Rules Merger V5 — 规则分析报告
 
-> 生成时间：2026-09-24 14:17:05 | 源：18/18 | 缓存命中：7
+> 生成时间：2026-09-25 02:44:29 | 源：18/18 | 缓存命中：13
 
 ## 一、概览
 
 | 指标 | 数值 |
 |------|------|
-| Block 规则 | 3,191,362 |
+| Block 规则 | 3,191,620 |
 | Allow 白名单 | 227 |
 | 综合去重率 | 16.6% |
-| 聚合精简 | 40,110 |
+| 聚合精简 | 40,083 |
 | 冲突消解 | 34 |
 | 带 $ 修饰符规则 | 5 |
-| 总耗时 | 94.4s |
+| 总耗时 | 79.2s |
 
 ## 二、优化流水线
 
 | 阶段 | 规则数 | 本阶段减少 |
 |------|--------|-----------|
-| 原始规则（Raw） | 3,828,629 | - |
-| 去重后（精确 591,790 / 规范化 4,938 / 正则 0） | 3,231,901 | -596,728 |
-| 聚合后（精确 40,108 / 通配符 2 / 升级 0） | 3,191,791 | -40,110 |
-| 冲突消解后 | 3,191,589 | -34 |
+| 原始规则（Raw） | 3,828,738 | - |
+| 去重后（精确 591,674 / 规范化 4,932 / 正则 0） | 3,232,132 | -596,606 |
+| 聚合后（精确 40,081 / 通配符 2 / 升级 0） | 3,192,049 | -40,083 |
+| 冲突消解后 | 3,191,847 | -34 |
 
 ## 三、规则类型与类别分布
 
@@ -29,7 +29,7 @@
 
 | 类型 | 数量 |
 |------|------|
-| domain | 3,191,453 |
+| domain | 3,191,711 |
 | ip | 72 |
 | regex | 63 |
 | wildcard | 1 |
@@ -39,9 +39,9 @@
 | 类别 | 数量 |
 |------|------|
 | malware | 2,249,543 |
-| other | 546,176 |
-| ads | 333,316 |
-| phishing | 61,780 |
+| other | 546,175 |
+| ads | 333,491 |
+| phishing | 61,864 |
 | tracking | 380 |
 | mining | 167 |
 
@@ -49,19 +49,19 @@
 
 | 源 | 原始规则 | 独占规则 | 与其他源共享 | 独占率 |
 |------|---------|---------|-------------|--------|
-| HaGeZi's Threat Intelligence Feeds | 2,249,549 | 2,096,240 | 151,708 | 93% |
-| HaGeZi's Gambling Blocklist | 537,153 | 530,313 | 6,807 | 99% |
-| HaGeZi's Ultimate Blocklist | 284,645 | 121,454 | 161,684 | 43% |
-| Phishing Army | 150,958 | 33,827 | 93,911 | 26% |
-| Phishing URL Blocklist (PhishTank and OpenPhish) | 39,773 | 14,616 | 21,196 | 41% |
+| HaGeZi's Threat Intelligence Feeds | 2,249,549 | 2,096,542 | 151,406 | 93% |
+| HaGeZi's Gambling Blocklist | 537,153 | 530,312 | 6,808 | 99% |
+| HaGeZi's Ultimate Blocklist | 284,645 | 121,451 | 161,687 | 43% |
+| Phishing Army | 150,577 | 33,788 | 93,628 | 27% |
+| Phishing URL Blocklist (PhishTank and OpenPhish) | 39,860 | 14,681 | 21,204 | 41% |
 | HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass | 16,476 | 14,597 | 1,609 | 90% |
-| CHN: AdRules DNS List | 201,554 | 10,999 | 186,620 | 6% |
+| CHN: AdRules DNS List | 201,681 | 10,999 | 186,747 | 6% |
 | CHN: anti-AD | 100,836 | 7,531 | 92,558 | 8% |
-| AdGuard DNS filter | 181,986 | 5,076 | 174,512 | 3% |
+| AdGuard DNS filter | 182,169 | 5,131 | 174,640 | 3% |
 | ShadowWhisperer's Dating List | 1,385 | 1,266 | 110 | 92% |
 | Malicious URL Blocklist (URLHaus) | 3,487 | 1,044 | 1,672 | 38% |
 | Stalkerware Indicators List | 934 | 443 | 63 | 88% |
-| OISD Blocklist Small | 57,309 | 83 | 55,734 | 0% |
+| OISD Blocklist Small | 57,402 | 82 | 55,828 | 0% |
 | Scam Blocklist by DurableNapkin | 934 | 4 | 918 | 0% |
 | NoCoin Filter List | 321 | 3 | 266 | 1% |
 | HaGeZi's DNS Rebind Protection | 25 | 3 | 0 | 100% |
@@ -74,24 +74,24 @@
 
 | 源 A | 源 B | 共同规则数 | A 覆盖率 | B 覆盖率 |
 |------|------|-----------|---------|---------|
-| AdGuard DNS filter | CHN: AdRules DNS List | 166,802 | 92.9% | 84.4% |
+| AdGuard DNS filter | CHN: AdRules DNS List | 166,930 | 92.9% | 84.4% |
 | CHN: anti-AD | CHN: AdRules DNS List | 86,534 | 86.5% | 43.8% |
-| CHN: AdRules DNS List | HaGeZi's Ultimate Blocklist | 84,344 | 42.7% | 29.8% |
-| AdGuard DNS filter | HaGeZi's Ultimate Blocklist | 82,533 | 46.0% | 29.1% |
-| Phishing Army | HaGeZi's Threat Intelligence Feeds | 80,792 | 63.2% | 3.6% |
+| CHN: AdRules DNS List | HaGeZi's Ultimate Blocklist | 84,350 | 42.7% | 29.8% |
+| AdGuard DNS filter | HaGeZi's Ultimate Blocklist | 82,537 | 45.9% | 29.2% |
+| Phishing Army | HaGeZi's Threat Intelligence Feeds | 80,451 | 63.1% | 3.6% |
 | AdGuard DNS filter | CHN: anti-AD | 77,260 | 43.0% | 77.2% |
 | HaGeZi's Threat Intelligence Feeds | HaGeZi's Ultimate Blocklist | 72,474 | 3.2% | 25.6% |
 | CHN: anti-AD | HaGeZi's Ultimate Blocklist | 59,460 | 59.4% | 21.0% |
-| HaGeZi's Ultimate Blocklist | OISD Blocklist Small | 55,607 | 19.6% | 99.6% |
-| CHN: AdRules DNS List | OISD Blocklist Small | 52,282 | 26.5% | 93.7% |
-| AdGuard DNS filter | OISD Blocklist Small | 51,680 | 28.8% | 92.6% |
-| CHN: anti-AD | OISD Blocklist Small | 40,151 | 40.1% | 71.9% |
-| Phishing Army | Phishing URL Blocklist (PhishTank and OpenPhish) | 20,234 | 15.8% | 56.5% |
-| Phishing Army | HaGeZi's Ultimate Blocklist | 11,890 | 9.3% | 4.2% |
-| CHN: AdRules DNS List | HaGeZi's Threat Intelligence Feeds | 10,375 | 5.3% | 0.5% |
-| AdGuard DNS filter | HaGeZi's Threat Intelligence Feeds | 9,084 | 5.1% | 0.4% |
-| Phishing URL Blocklist (PhishTank and OpenPhish) | HaGeZi's Threat Intelligence Feeds | 7,974 | 22.3% | 0.4% |
-| HaGeZi's Threat Intelligence Feeds | OISD Blocklist Small | 6,846 | 0.3% | 12.3% |
+| HaGeZi's Ultimate Blocklist | OISD Blocklist Small | 55,619 | 19.6% | 99.5% |
+| CHN: AdRules DNS List | OISD Blocklist Small | 52,376 | 26.5% | 93.7% |
+| AdGuard DNS filter | OISD Blocklist Small | 51,774 | 28.8% | 92.6% |
+| CHN: anti-AD | OISD Blocklist Small | 40,151 | 40.1% | 71.8% |
+| Phishing Army | Phishing URL Blocklist (PhishTank and OpenPhish) | 20,223 | 15.9% | 56.4% |
+| Phishing Army | HaGeZi's Ultimate Blocklist | 11,871 | 9.3% | 4.2% |
+| CHN: AdRules DNS List | HaGeZi's Threat Intelligence Feeds | 10,375 | 5.2% | 0.5% |
+| AdGuard DNS filter | HaGeZi's Threat Intelligence Feeds | 9,087 | 5.1% | 0.4% |
+| Phishing URL Blocklist (PhishTank and OpenPhish) | HaGeZi's Threat Intelligence Feeds | 7,926 | 22.1% | 0.4% |
+| HaGeZi's Threat Intelligence Feeds | OISD Blocklist Small | 6,848 | 0.3% | 12.2% |
 | CHN: anti-AD | HaGeZi's Threat Intelligence Feeds | 6,486 | 6.5% | 0.3% |
 | HaGeZi's Threat Intelligence Feeds | HaGeZi's Gambling Blocklist | 5,570 | 0.2% | 1.0% |
 
@@ -104,12 +104,12 @@
 | HaGeZi's Threat Intelligence Feeds | 2,249,549 | 2,247,948 | 0.1% |
 | HaGeZi's Gambling Blocklist | 537,153 | 537,120 | 0.0% |
 | HaGeZi's Ultimate Blocklist | 284,645 | 283,138 | 0.5% |
-| CHN: AdRules DNS List | 201,554 | 197,619 | 2.0% |
-| AdGuard DNS filter | 181,986 | 179,588 | 1.3% |
-| Phishing Army | 150,958 | 127,738 | 15.4% |
+| CHN: AdRules DNS List | 201,681 | 197,746 | 2.0% |
+| AdGuard DNS filter | 182,169 | 179,771 | 1.3% |
+| Phishing Army | 150,577 | 127,416 | 15.4% |
 | CHN: anti-AD | 100,836 | 100,089 | 0.7% |
-| OISD Blocklist Small | 57,309 | 55,817 | 2.6% |
-| Phishing URL Blocklist (PhishTank and OpenPhish) | 39,773 | 35,812 | 10.0% |
+| OISD Blocklist Small | 57,402 | 55,910 | 2.6% |
+| Phishing URL Blocklist (PhishTank and OpenPhish) | 39,860 | 35,885 | 10.0% |
 | HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass | 16,476 | 16,206 | 1.6% |
 | Malicious URL Blocklist (URLHaus) | 3,487 | 2,716 | 22.1% |
 | ShadowWhisperer's Dating List | 1,385 | 1,376 | 0.6% |
@@ -221,11 +221,11 @@
 | `a.adwolf.ru` | 🟡 可疑 | 广告/营销 | 0.90 | DNS NXDOMAIN（域名已过期，白名单可能无效） | AdGuard DNS filter |
 | `aax-fe.amazon.co.jp` | 🟡 可疑 | 联盟营销/跳转 | 0.90 | 诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Brand "amazon" appears in subdomain but root domain is different | AdGuard DNS filter |
 | `ad.10010.com` | 🟡 可疑 | 广告/营销 | 0.60 | 诈骗/钓鱼检测 [CAUTION, 风险分35]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Long numeric sequence | AdGuard DNS filter |
-| `ad.cityu.edu.hk` | 🟡 可疑 | 广告/营销 | 0.60 | 解析到私有/回环 IP: ['172.26.255.1', '172.26.255.11', '172.26.255.2', '172.26.255.12'] | CHN: anti-AD |
+| `ad.cityu.edu.hk` | 🟡 可疑 | 广告/营销 | 0.60 | 解析到私有/回环 IP: ['172.26.255.11', '172.26.255.12', '172.26.255.2', '172.26.255.1'] | CHN: anti-AD |
 | `ads.tdbank.com` | 🟡 可疑 | 广告/营销 | 0.60 | DNS NXDOMAIN（域名已过期，白名单可能无效） | AdGuard DNS filter |
 | `ap01.records.in.treasuredata.com` | 🟡 可疑 | 其他 | 0.00 | 诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Deep subdomain chain (5 levels): common in phishing | AdGuard DNS filter |
 | `clickattr.wayup.com` | 🟡 可疑 | 其他 | 0.00 | 诈骗/钓鱼检测 [CAUTION, 风险分30]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; SSL certificate does not cover "clickattr.wayup.com" (CN/SAN mismatch) — possible misconfiguration or MITM | AdGuard DNS filter |
-| `dns.msftncsi.com` | 🟡 可疑 | 微软/Windows 遥测 | 0.90 | 解析到私有/回环 IP: ['131.107.255.255', 'fd3e:4f5a:5b81::1'] | HaGeZi's DNS Rebind Protection |
+| `dns.msftncsi.com` | 🟡 可疑 | 微软/Windows 遥测 | 0.90 | 解析到私有/回环 IP: ['fd3e:4f5a:5b81::1', '131.107.255.255'] | HaGeZi's DNS Rebind Protection |
 | `edge-enterprise.activity.windows.com` | 🟡 可疑 | 微软/Windows 遥测 | 0.90 | 解析到私有/回环 IP: ['127.0.0.1'] | CHN: anti-AD |
 | `edge.activity.windows.com` | 🟡 可疑 | 微软/Windows 遥测 | 0.90 | 解析到私有/回环 IP: ['127.0.0.1'] | CHN: anti-AD |
 | `email.procook.co.uk` | 🟡 可疑 | 其他 | 0.00 | DNS NXDOMAIN（域名已过期，白名单可能无效） | AdGuard DNS filter |
@@ -238,8 +238,8 @@
 | `meizu.coapi.moji.com` | 🟡 可疑 | 其他 | 0.00 | DNS NXDOMAIN（域名已过期，白名单可能无效） | CHN: anti-AD |
 | `news-app.abumedia.yql.yahoo.com` | 🟡 可疑 | 其他 | 0.00 | 诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Deep subdomain chain (5 levels): common in phishing | CHN: anti-AD |
 | `omniture.walmart.com` | 🟡 可疑 | 电商/支付 | 0.90 | 诈骗/钓鱼检测 [CAUTION, 风险分30]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; SSL certificate does not cover "omniture.walmart.com" (CN/SAN mismatch) — possible misconfiguration or MITM | AdGuard DNS filter |
-| `pt.afl.rakuten.co.jp` | 🟡 可疑 | 其他 | 0.00 | 诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Deep subdomain chain (5 levels): common in phishing | AdGuard DNS filter |
-| `s.mvconf.f.360.cn` | 🟡 可疑 | 其他 | 0.00 | 诈骗/钓鱼检测 [SUSPICIOUS, 风险分45]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; Deep subdomain chain (5 levels): common in phishing | CHN: anti-AD |
+| `pt.afl.rakuten.co.jp` | 🟡 可疑 | 其他 | 0.00 | 诈骗/钓鱼检测 [CAUTION, 风险分30]: Deep subdomain chain (5 levels): common in phishing | AdGuard DNS filter |
+| `s.mvconf.f.360.cn` | 🟡 可疑 | 其他 | 0.00 | 诈骗/钓鱼检测 [CAUTION, 风险分30]: Deep subdomain chain (5 levels): common in phishing | CHN: anti-AD |
 | `sponsor.nitropay.com` | 🟡 可疑 | 其他 | 0.00 | DNS NXDOMAIN（域名已过期，白名单可能无效） | AdGuard DNS filter |
 | `stat.jseea.cn` | 🟡 可疑 | 分析/追踪 | 0.60 | 诈骗/钓鱼检测 [CAUTION, 风险分30]: Domain NOT FOUND in the registry (RDAP 404) — likely unregistered. Any link using it is broken, fake or a typo; SSL certificate does not cover "stat.jseea.cn" (CN/SAN mismatch) — possible misconfiguration or MITM | CHN: anti-AD |
 | `thumbnail.thench.net` | 🟡 可疑 | 其他 | 0.00 | DNS NXDOMAIN（域名已过期，白名单可能无效） | AdGuard DNS filter |
@@ -447,7 +447,7 @@
 
 | 规则类型 | 语法示例 | 状态 | 处理方式 | 数量 |
 |---------|---------|------|---------|------|
-| Block 域名 | `||example.com^` | ✅ 支持 | 核心输出 | 3,191,453 |
+| Block 域名 | `||example.com^` | ✅ 支持 | 核心输出 | 3,191,711 |
 | 通配符 | `||*.example.com^` | ✅ 支持 | 聚合覆盖子域 | 1 |
 | Allow 白名单 | `@@||example.com^` | ✅ 支持 | 分离到 whitelist.txt | 227 |
 | 正则 | `/ads.*/` | ✅ 保留 | 原样保留 | 63 |
@@ -461,22 +461,22 @@
 | 后缀 | 规则数 |
 |------|--------|
 | fbcdn.net | 6,760 |
-| weebly.com | 4,616 |
+| weebly.com | 4,627 |
 | cloudfront.net | 3,475 |
 | hl.cn | 2,719 |
 | wixstudio.com | 2,256 |
-| web.app | 2,056 |
-| amazonaws.com | 2,015 |
+| web.app | 2,057 |
+| amazonaws.com | 2,017 |
 | firebaseapp.com | 1,993 |
-| eu.cc | 1,901 |
-| pages.dev | 1,860 |
+| eu.cc | 1,910 |
+| pages.dev | 1,848 |
 | r2.dev | 1,773 |
 | run.app | 1,219 |
 | sa.com | 1,195 |
 | ru.com | 1,081 |
 | my.id | 1,001 |
-| vercel.app | 978 |
-| framer.app | 939 |
+| vercel.app | 990 |
+| framer.app | 942 |
 | appspot.com | 839 |
 | biz.id | 794 |
 | za.com | 717 |
@@ -485,11 +485,11 @@
 
 | 指标 | 数值 |
 |------|------|
-| 总耗时 | 94.4s |
+| 总耗时 | 79.2s |
 | 源成功率 | 18/18 |
-| 缓存命中 | 7 |
-| 精确去重 | 591,790 |
-| 规范化去重 | 4,938 |
+| 缓存命中 | 13 |
+| 精确去重 | 591,674 |
+| 规范化去重 | 4,932 |
 | 正则去重 | 0 |
 | 质量过滤丢弃 | 38 |
 | 模式丢弃 | 878 |
@@ -500,4 +500,4 @@
 | 最短/最长域名 | 2 / 130 字符 |
 
 ---
-*AdGuard Rules Merger V5 · 自动生成 · 2026-09-24*
+*AdGuard Rules Merger V5 · 自动生成 · 2026-09-25*

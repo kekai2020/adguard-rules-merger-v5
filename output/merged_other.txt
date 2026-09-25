@@ -1,7 +1,7 @@
 ! Title: Merged other filter (V5)
 ! Category: other
-! Version: cdd56cee6f8e
-! Rules: 546176
+! Version: f6c5b8edc85e
+! Rules: 546175
 !
 ||0-10-7.casino^
 ||0-30-7.casino^
@@ -136247,7 +136247,6 @@
 ||bet73007.com^
 ||bet73023.com^
 ||bet73026.com^
-||bet73045.com^
 ||bet73095.com^
 ||bet73098.com^
 ||bet7322.com^

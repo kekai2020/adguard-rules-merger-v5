@@ -3,36 +3,36 @@
     "name": "HaGeZi's Threat Intelligence Feeds",
     "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_44.txt",
     "raw_rules": 2249549,
-    "unique_rules": 2096240,
-    "shared_rules": 151708
+    "unique_rules": 2096542,
+    "shared_rules": 151406
   },
   {
     "name": "HaGeZi's Gambling Blocklist",
     "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_47.txt",
     "raw_rules": 537153,
-    "unique_rules": 530313,
-    "shared_rules": 6807
+    "unique_rules": 530312,
+    "shared_rules": 6808
   },
   {
     "name": "HaGeZi's Ultimate Blocklist",
     "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt",
     "raw_rules": 284645,
-    "unique_rules": 121454,
-    "shared_rules": 161684
+    "unique_rules": 121451,
+    "shared_rules": 161687
   },
   {
     "name": "Phishing Army",
     "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_18.txt",
-    "raw_rules": 150958,
-    "unique_rules": 33827,
-    "shared_rules": 93911
+    "raw_rules": 150577,
+    "unique_rules": 33788,
+    "shared_rules": 93628
   },
   {
     "name": "Phishing URL Blocklist (PhishTank and OpenPhish)",
     "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_30.txt",
-    "raw_rules": 39773,
-    "unique_rules": 14616,
-    "shared_rules": 21196
+    "raw_rules": 39860,
+    "unique_rules": 14681,
+    "shared_rules": 21204
   },
   {
     "name": "HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass",
@@ -44,9 +44,9 @@
   {
     "name": "CHN: AdRules DNS List",
     "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_29.txt",
-    "raw_rules": 201554,
+    "raw_rules": 201681,
     "unique_rules": 10999,
-    "shared_rules": 186620
+    "shared_rules": 186747
   },
   {
     "name": "CHN: anti-AD",
@@ -58,9 +58,9 @@
   {
     "name": "AdGuard DNS filter",
     "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt",
-    "raw_rules": 181986,
-    "unique_rules": 5076,
-    "shared_rules": 174512
+    "raw_rules": 182169,
+    "unique_rules": 5131,
+    "shared_rules": 174640
   },
   {
     "name": "ShadowWhisperer's Dating List",
@@ -86,9 +86,9 @@
   {
     "name": "OISD Blocklist Small",
     "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_5.txt",
-    "raw_rules": 57309,
-    "unique_rules": 83,
-    "shared_rules": 55734
+    "raw_rules": 57402,
+    "unique_rules": 82,
+    "shared_rules": 55828
   },
   {
     "name": "Scam Blocklist by DurableNapkin",
