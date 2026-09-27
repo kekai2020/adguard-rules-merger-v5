@@ -1,7 +1,7 @@
 ! Title: Merged tracking filter (V5)
 ! Category: tracking
-! Version: 63d52e429254
-! Rules: 380
+! Version: 4dc71f73fcea
+! Rules: 378
 !
 ||a-ring-fallback.msedge.net^
 ||a-ring.msedge.net^
@@ -36,7 +36,6 @@
 ||analytics.trafficmanager.net^
 ||analyticsehnwe.servicebus.windows.net^
 ||analyticspixel.microsoft.com^
-||api.applicationinsights.azure.cn^
 ||appex-rf.msn.com^
 ||applicationinsights.azure.com^
 ||applicationinsights.azure.us^
@@ -47,7 +46,6 @@
 ||arc1.msn.com^
 ||arc2.msn.com^
 ||arc3.msn.com^
-||arc5.msn.com^
 ||arc9.msn.com^
 ||aria.microsoft.com^
 ||auc-visio-telemetry.officeapps.live.com^
