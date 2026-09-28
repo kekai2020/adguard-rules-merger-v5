@@ -1,7 +1,7 @@
 ! Title: Merged other filter (V5)
 ! Category: other
-! Version: 6b436e8aaaec
-! Rules: 570769
+! Version: 946831cbe546
+! Rules: 570768
 !
 ||0-0-0-9.com^
 ||0-10-7.casino^
@@ -138033,7 +138033,6 @@
 ||bet365-th-casino.diy^
 ||bet365-th-casino.fit^
 ||bet365-th-casino.games^
-||bet365-th-casino.help^
 ||bet365-th-casino.host^
 ||bet365-th-casino.info^
 ||bet365-th-casino.ink^
