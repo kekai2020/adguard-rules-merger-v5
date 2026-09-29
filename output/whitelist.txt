@@ -1,8 +1,8 @@
 ! Title: Whitelist for Merged Rules (V5)
 ! Description: Allow rules separated from main filter
-! Version: 1f03653255ec
-! Generated: 2026-09-28T03:08:33.931375+00:00
-! Total allow rules: 227
+! Version: c7ff0ea4501b
+! Generated: 2026-09-29T03:31:10.144727+00:00
+! Total allow rules: 228
 !
 @@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
 @@||5471782.fls.doubleclick.net^
@@ -99,6 +99,7 @@
 @@||email.awscloud.com^
 @@||email.elitedangerous.com^
 @@||email.procook.co.uk^
+@@||emails.educause.edu^
 @@||envato.market^
 @@||f-gear.ec-optimizer.com^
 @@||feed.adrelayer.com^

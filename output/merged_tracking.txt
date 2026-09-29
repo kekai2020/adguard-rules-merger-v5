@@ -1,7 +1,7 @@
 ! Title: Merged tracking filter (V5)
 ! Category: tracking
-! Version: 4dc71f73fcea
-! Rules: 378
+! Version: 950f7742f4e3
+! Rules: 376
 !
 ||a-ring-fallback.msedge.net^
 ||a-ring.msedge.net^
@@ -177,7 +177,7 @@
 ||glance-analytics.trafficmanager.net^
 ||h1.msn.com^
 ||h2.msn.com^
-||h4g3z1-native.winoffice.web.app^
+||h4g3z1-native-winoffice.web.app^
 ||h6.msn.com^
 ||hk-tracker.trafficmanager.net^
 ||hme-live-loganalytics-namespace.servicebus.windows.net^
@@ -285,7 +285,6 @@
 ||ppc-word-telemetry.officeapps.live.com^
 ||ppc-word-telemetry.wac.trafficmanager.net^
 ||ppm-licensingtelemetry.servicebus.windows.net^
-||prd-qlik-telemetry.servicebus.windows.net^
 ||preview.msn.com^
 ||prod-eh-v1-analytics.servicebus.windows.net^
 ||prod-eventhub-analytics.servicebus.windows.net^
@@ -341,7 +340,6 @@
 ||telemetry.eastus.trafficmanager.net^
 ||telemetry.microsoft.com^
 ||telemetry.microsoft.us^
-||telemetry.officeapps.live.com^
 ||telemetry.visualstudio.microsoft.com^
 ||telemetrycollector.microsoft.com^
 ||tgtus1-excel-telemetry-vip.officeapps.live.com^

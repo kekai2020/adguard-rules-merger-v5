@@ -1,7 +1,7 @@
 ! Title: Merged mining filter (V5)
 ! Category: mining
-! Version: cad89640189f
-! Rules: 167
+! Version: ed2951db87f5
+! Rules: 166
 !
 ||1q2w3.fun^
 ||aeros01.tk^
@@ -43,7 +43,6 @@
 ||cnhv.co^
 ||coin-have.com^
 ||coinblind.com^
-||coinimp.com^
 ||coinimp.net^
 ||coinminingonline.com^
 ||coinnebula.com^

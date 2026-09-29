@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe)
-! Count: 183
-! Generated: 2026-09-28T03:08:36.939119+00:00
+! Count: 184
+! Generated: 2026-09-29T03:31:13.121417+00:00
 @@||a.sellpoint.net^
 @@||ac.ebis.ne.jp^
 @@||acs-m.daraz.com.bd^
@@ -75,6 +75,7 @@
 @@||e.customeriomail.com^
 @@||email.awscloud.com^
 @@||email.elitedangerous.com^
+@@||emails.educause.edu^
 @@||f-gear.ec-optimizer.com^
 @@||feed.adrelayer.com^
 @@||forum.notebookreview.com^
