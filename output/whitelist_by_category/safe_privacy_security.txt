@@ -1,4 +1,4 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 隐私/安全)
 ! Count: 1
-! Generated: 2026-09-30T03:15:16.460653+00:00
+! Generated: 2026-10-01T03:21:32.017912+00:00
 @@||ad-block.dns.adguard.com^
