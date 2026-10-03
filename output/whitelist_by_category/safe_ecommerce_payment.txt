@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 电商/支付)
 ! Count: 9
-! Generated: 2026-10-02T03:21:59.556708+00:00
+! Generated: 2026-10-03T03:07:45.929332+00:00
 @@||advertisement.taobao.com^
 @@||center-h5api.m.taobao.com^
 @@||click.simba.taobao.com^
