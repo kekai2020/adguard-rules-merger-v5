@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 广告/营销)
 ! Count: 11
-! Generated: 2026-10-03T03:07:45.927701+00:00
+! Generated: 2026-10-04T03:35:51.334394+00:00
 @@||ad.kazakinfo.com^
 @@||ad.ourgame.com^
 @@||ad.siemens.com.cn^

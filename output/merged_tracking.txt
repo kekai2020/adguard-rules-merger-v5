@@ -1,6 +1,6 @@
 ! Title: Merged tracking filter (V5)
 ! Category: tracking
-! Version: 950f7742f4e3
+! Version: 6f9cca461e5d
 ! Rules: 376
 !
 ||a-ring-fallback.msedge.net^
@@ -193,7 +193,6 @@
 ||inference-app-gateway.northeurope.cloudapp.azure.com^
 ||inference-location-livenet.trafficmanager.net^
 ||ingest.appcenter.ms^
-||insights.cloud.microsoft^
 ||ir-tracking.trafficmanager.net^
 ||irreverselookuptm.trafficmanager.net^
 ||ism-telemetry.trafficmanager.net^
@@ -285,6 +284,7 @@
 ||ppc-word-telemetry.officeapps.live.com^
 ||ppc-word-telemetry.wac.trafficmanager.net^
 ||ppm-licensingtelemetry.servicebus.windows.net^
+||prd-qlik-telemetry.servicebus.windows.net^
 ||preview.msn.com^
 ||prod-eh-v1-analytics.servicebus.windows.net^
 ||prod-eventhub-analytics.servicebus.windows.net^
