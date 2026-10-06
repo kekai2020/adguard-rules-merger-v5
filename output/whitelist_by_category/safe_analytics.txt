@@ -1,12 +1,11 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 分析/追踪)
-! Count: 9
-! Generated: 2026-10-05T03:17:06.292675+00:00
+! Count: 8
+! Generated: 2026-10-06T04:04:44.842733+00:00
 @@||analytics.amplitude.com^
 @@||chart-embed.service.newrelic.com^
 @@||citiintl.122.2o7.net^
 @@||gs.statcounter.com^
 @@||infra-api.newrelic.com^
 @@||sbs.demdex.net^
-@@||stat.jseea.cn^
 @@||statcounter.com^
 @@||stats.uptimerobot.com^

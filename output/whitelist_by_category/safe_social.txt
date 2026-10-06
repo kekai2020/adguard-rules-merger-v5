@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 社交/分享)
 ! Count: 4
-! Generated: 2026-10-05T03:17:06.293322+00:00
+! Generated: 2026-10-06T04:04:44.843523+00:00
 @@||ads.privacy.qq.com^
 @@||feed.adrelayer.com^
 @@||future.biz.weibo.com^
