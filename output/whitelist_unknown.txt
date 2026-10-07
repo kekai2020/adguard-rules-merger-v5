@@ -1,18 +1,33 @@
 ! Title: AdGuard Rules Merger — Whitelist (unknown)
-! Count: 15
-! Generated: 2026-10-06T04:04:44.842127+00:00
+! Count: 30
+! Generated: 2026-10-07T03:33:05.652539+00:00
+@@||3gppnetwork.org^
 @@||ad.abchina.com^
 @@||ad.azure.com^
 @@||adcdn.pingan.com^
 @@||analysis.windows.net^
+@@||asusrouter.com^
+@@||b.barracudacentral.org^
+@@||bl.blocklist.de^
 @@||buyad.bi-xenon.cn^
 @@||datadoghq-browser-agent.com^
+@@||direct.quickconnect.to^
+@@||dnsbl.dronebl.org^
+@@||dq.spamhaus.net^
 @@||dxcloud.episerver.net^
 @@||envato.market^
 @@||jdoqocy.com^
 @@||leechers-paradise.org^
+@@||mail.abusix.zone^
+@@||mailspike.net^
 @@||msftconnecttest.com^
+@@||myunraid.net^
 @@||redir.tradedoubler.com^
+@@||sophosxl.net^
 @@||stats.gov.cn^
 @@||tongji.cn^
 @@||tongji.edu.cn^
+@@||tor.dan.me.uk^
+@@||torexit.dan.me.uk^
+@@||tplinklogin.net^
+@@||uceprotect.net^

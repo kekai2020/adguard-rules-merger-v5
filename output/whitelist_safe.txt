@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe)
-! Count: 184
-! Generated: 2026-10-06T04:04:44.841567+00:00
+! Count: 200
+! Generated: 2026-10-07T03:33:05.652043+00:00
 @@||a.sellpoint.net^
 @@||ac.ebis.ne.jp^
 @@||acs-m.daraz.com.bd^
@@ -33,6 +33,7 @@
 @@||artifactory.appodeal.com^
 @@||autocomplete.clearbit.com^
 @@||awin1.com^
+@@||backscatterer.org^
 @@||baozhang.baidu.com^
 @@||belgium.wolterskluwer.com^
 @@||c.office.com^
@@ -71,6 +72,7 @@
 @@||data.orders.costco.ca^
 @@||data.orders.costco.com^
 @@||data.promo.timhortons.ca^
+@@||dnswl.org^
 @@||dogpile.com^
 @@||e.customeriomail.com^
 @@||email.awscloud.com^
@@ -91,9 +93,11 @@
 @@||goto.target.com^
 @@||goto.walmart.com^
 @@||gs.statcounter.com^
+@@||hash.cymru.com^
 @@||health.halodoc.com^
 @@||hidive.com^
 @@||home.focusatwill.com^
+@@||hostkarma.junkemailfilter.com^
 @@||href.li^
 @@||ia.hit.interia.pl^
 @@||id.i2i.jp^
@@ -101,6 +105,7 @@
 @@||infra-api.newrelic.com^
 @@||insideruser.microsoft.com^
 @@||intersport.peerius.com^
+@@||ipv4only.arpa^
 @@||itoya.ec-optimizer.com^
 @@||js.monitor.azure.com^
 @@||learn.khanacademy.org^
@@ -119,6 +124,7 @@
 @@||netatmo.commander1.com^
 @@||news.warhammer.com^
 @@||nineto5mac-d.openx.net^
+@@||nordspam.com^
 @@||oa.tr.line.me^
 @@||obituaries.therecord.com^
 @@||obituaries.thestar.com^
@@ -146,6 +152,8 @@
 @@||refer.discover.com^
 @@||remembering.ca^
 @@||res.ads.nicovideo.jp^
+@@||routerlogin.com^
+@@||routerlogin.net^
 @@||s.bluecore.com^
 @@||sax.sina.com.cn^
 @@||sbs.demdex.net^
@@ -156,6 +164,9 @@
 @@||skyapi.onedrive.live.com^
 @@||skydrivesync.policies.live.net^
 @@||smtp.focusgroupresearch.com^
+@@||spameatingmonkey.net^
+@@||spamhaus.org^
+@@||spamrats.com^
 @@||ssai.aniview.com^
 @@||stash.roistat.com^
 @@||statcounter.com^
@@ -164,6 +175,7 @@
 @@||str.hit.gemius.pl^
 @@||support-beacon.nakanohito.jp^
 @@||support-widget.nakanohito.jp^
+@@||surbl.org^
 @@||surveymyopinion.researchnow.com^
 @@||swasc.homedepot.com^
 @@||tags.crwdcntrl.net^
@@ -172,6 +184,9 @@
 @@||tlh.gedidigital.it^
 @@||tms.capitalone.com^
 @@||torimochi.line-apps.com^
+@@||tplinkap.net^
+@@||tplinkrepeater.net^
+@@||tplinkwifi.net^
 @@||tr.rdrtr.com^
 @@||track.rutarget.ru^
 @@||track.webgains.com^
@@ -180,6 +195,7 @@
 @@||tube.e.kuaishou.com^
 @@||uland.taobao.com^
 @@||unsubscribe.lhinsights.com^
+@@||uribl.com^
 @@||used.ca^
 @@||validate.perfdrive.com^
 @@||vcentry2.valuecommerce.ne.jp^

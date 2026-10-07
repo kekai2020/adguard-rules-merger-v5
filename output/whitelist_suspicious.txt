@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (suspicious)
-! Count: 28
-! Generated: 2026-10-06T04:04:44.841846+00:00
+! Count: 39
+! Generated: 2026-10-07T03:33:05.652309+00:00
 @@||5471782.fls.doubleclick.net^
 @@||79423.analytics.edgekey.net^
 @@||a.adwolf.ru^
@@ -9,12 +9,19 @@
 @@||ad.cityu.edu.hk^
 @@||ads.tdbank.com^
 @@||ap01.records.in.treasuredata.com^
+@@||avqs.mcafee.com^
+@@||avts.mcafee.com^
+@@||bl.spamcop.net^
 @@||clickattr.wayup.com^
+@@||dishy.starlink.com^
 @@||dns.msftncsi.com^
 @@||edge-enterprise.activity.windows.com^
 @@||edge.activity.windows.com^
 @@||email.procook.co.uk^
 @@||fritz.nas^
+@@||fritz.powerline^
+@@||fritz.repeater^
+@@||fritz.smartgateway^
 @@||grp07.ias.rakuten.co.jp^
 @@||guce.advertising.com^
 @@||hb.afl.rakuten.co.jp^
@@ -23,8 +30,12 @@
 @@||meizu.coapi.moji.com^
 @@||news-app.abumedia.yql.yahoo.com^
 @@||omniture.walmart.com^
+@@||plex.direct^
+@@||psbl.surriel.com^
 @@||pt.afl.rakuten.co.jp^
+@@||router.asus.com^
 @@||s.mvconf.f.360.cn^
+@@||speedport.ip^
 @@||sponsor.nitropay.com^
 @@||stat.jseea.cn^
 @@||thumbnail.thench.net^

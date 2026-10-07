@@ -1,10 +1,11 @@
 ! Title: Whitelist for Merged Rules (V5)
 ! Description: Allow rules separated from main filter
-! Version: c7ff0ea4501b
-! Generated: 2026-10-06T04:04:41.650502+00:00
-! Total allow rules: 228
+! Version: b95c06949aa0
+! Generated: 2026-10-07T03:33:02.607293+00:00
+! Total allow rules: 270
 !
 @@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
+@@||3gppnetwork.org^
 @@||5471782.fls.doubleclick.net^
 @@||79423.analytics.edgekey.net^
 @@||a.adwolf.ru^
@@ -47,10 +48,17 @@
 @@||app.appsflyer.com^
 @@||app.powerbi.com^
 @@||artifactory.appodeal.com^
+@@||asusrouter.com^
 @@||autocomplete.clearbit.com^
+@@||avqs.mcafee.com^
+@@||avts.mcafee.com^
 @@||awin1.com^
+@@||b.barracudacentral.org^
+@@||backscatterer.org^
 @@||baozhang.baidu.com^
 @@||belgium.wolterskluwer.com^
+@@||bl.blocklist.de^
+@@||bl.spamcop.net^
 @@||buyad.bi-xenon.cn^
 @@||c.office.com^
 @@||captcha.su.baidu.com^
@@ -90,8 +98,13 @@
 @@||data.orders.costco.com^
 @@||data.promo.timhortons.ca^
 @@||datadoghq-browser-agent.com^
+@@||direct.quickconnect.to^
+@@||dishy.starlink.com^
 @@||dns.msftncsi.com^
+@@||dnsbl.dronebl.org^
+@@||dnswl.org^
 @@||dogpile.com^
+@@||dq.spamhaus.net^
 @@||dxcloud.episerver.net^
 @@||e.customeriomail.com^
 @@||edge-enterprise.activity.windows.com^
@@ -106,6 +119,9 @@
 @@||forum.notebookreview.com^
 @@||fritz.box^
 @@||fritz.nas^
+@@||fritz.powerline^
+@@||fritz.repeater^
+@@||fritz.smartgateway^
 @@||ftp.bmp.ovh^
 @@||future.biz.weibo.com^
 @@||gate.first-id.fr^
@@ -119,10 +135,12 @@
 @@||grp07.ias.rakuten.co.jp^
 @@||gs.statcounter.com^
 @@||guce.advertising.com^
+@@||hash.cymru.com^
 @@||hb.afl.rakuten.co.jp^
 @@||health.halodoc.com^
 @@||hidive.com^
 @@||home.focusatwill.com^
+@@||hostkarma.junkemailfilter.com^
 @@||href.li^
 @@||ia.hit.interia.pl^
 @@||id.i2i.jp^
@@ -130,6 +148,7 @@
 @@||infra-api.newrelic.com^
 @@||insideruser.microsoft.com^
 @@||intersport.peerius.com^
+@@||ipv4only.arpa^
 @@||itoya.ec-optimizer.com^
 @@||jdoqocy.com^
 @@||js.monitor.azure.com^
@@ -146,15 +165,19 @@
 @@||logentries.com^
 @@||login.sendpulse.com^
 @@||ma135-r.analytics.edgekey.net^
+@@||mail.abusix.zone^
+@@||mailspike.net^
 @@||marketing.net.idealo-partner.com^
 @@||media-consumer365.desigual.com^
 @@||meizu.coapi.moji.com^
 @@||msftconnecttest.com^
 @@||my.tealiumiq.com^
+@@||myunraid.net^
 @@||netatmo.commander1.com^
 @@||news-app.abumedia.yql.yahoo.com^
 @@||news.warhammer.com^
 @@||nineto5mac-d.openx.net^
+@@||nordspam.com^
 @@||oa.tr.line.me^
 @@||obituaries.therecord.com^
 @@||obituaries.thestar.com^
@@ -168,9 +191,11 @@
 @@||partner.everydays.de^
 @@||partner.o2online.de^
 @@||passport.bobo.com^
+@@||plex.direct^
 @@||prod.impartner.live^
 @@||promo.gramedia.com^
 @@||proto2ad.durasite.net^
+@@||psbl.surriel.com^
 @@||pt.afl.rakuten.co.jp^
 @@||public-cis.exponea.com^
 @@||puzzles-games-api.gp-prod.conde.digital^
@@ -185,6 +210,9 @@
 @@||refer.discover.com^
 @@||remembering.ca^
 @@||res.ads.nicovideo.jp^
+@@||router.asus.com^
+@@||routerlogin.com^
+@@||routerlogin.net^
 @@||s.bluecore.com^
 @@||s.mvconf.f.360.cn^
 @@||sax.sina.com.cn^
@@ -196,6 +224,11 @@
 @@||skyapi.onedrive.live.com^
 @@||skydrivesync.policies.live.net^
 @@||smtp.focusgroupresearch.com^
+@@||sophosxl.net^
+@@||spameatingmonkey.net^
+@@||spamhaus.org^
+@@||spamrats.com^
+@@||speedport.ip^
 @@||sponsor.nitropay.com^
 @@||ssai.aniview.com^
 @@||stash.roistat.com^
@@ -207,6 +240,7 @@
 @@||str.hit.gemius.pl^
 @@||support-beacon.nakanohito.jp^
 @@||support-widget.nakanohito.jp^
+@@||surbl.org^
 @@||surveymyopinion.researchnow.com^
 @@||swasc.homedepot.com^
 @@||tags.crwdcntrl.net^
@@ -218,15 +252,23 @@
 @@||tms.capitalone.com^
 @@||tongji.cn^
 @@||tongji.edu.cn^
+@@||tor.dan.me.uk^
+@@||torexit.dan.me.uk^
 @@||torimochi.line-apps.com^
+@@||tplinkap.net^
+@@||tplinklogin.net^
+@@||tplinkrepeater.net^
+@@||tplinkwifi.net^
 @@||tr.rdrtr.com^
 @@||track.rutarget.ru^
 @@||track.webgains.com^
 @@||tracker.eu.org^
 @@||trk.ecomm.lenovo.com^
 @@||tube.e.kuaishou.com^
+@@||uceprotect.net^
 @@||uland.taobao.com^
 @@||unsubscribe.lhinsights.com^
+@@||uribl.com^
 @@||used.ca^
 @@||validate.perfdrive.com^
 @@||vcentry2.valuecommerce.ne.jp^

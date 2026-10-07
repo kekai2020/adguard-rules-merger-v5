@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 其他)
-! Count: 119
-! Generated: 2026-10-06T04:04:44.844050+00:00
+! Count: 132
+! Generated: 2026-10-07T03:33:05.654491+00:00
 @@||a.sellpoint.net^
 @@||ac.ebis.ne.jp^
 @@||acs-m.daraz.com.bd^
@@ -23,6 +23,7 @@
 @@||app.powerbi.com^
 @@||artifactory.appodeal.com^
 @@||autocomplete.clearbit.com^
+@@||backscatterer.org^
 @@||baozhang.baidu.com^
 @@||belgium.wolterskluwer.com^
 @@||captcha.su.baidu.com^
@@ -43,6 +44,7 @@
 @@||data.digital.costco.ca^
 @@||data.orders.costco.ca^
 @@||data.promo.timhortons.ca^
+@@||dnswl.org^
 @@||dogpile.com^
 @@||e.customeriomail.com^
 @@||email.awscloud.com^
@@ -54,13 +56,16 @@
 @@||ftp.bmp.ovh^
 @@||gate.first-id.fr^
 @@||get.neofinancial.com^
+@@||hash.cymru.com^
 @@||health.halodoc.com^
 @@||hidive.com^
 @@||home.focusatwill.com^
+@@||hostkarma.junkemailfilter.com^
 @@||href.li^
 @@||ia.hit.interia.pl^
 @@||id.i2i.jp^
 @@||intersport.peerius.com^
+@@||ipv4only.arpa^
 @@||itoya.ec-optimizer.com^
 @@||learn.khanacademy.org^
 @@||linka.page^
@@ -71,6 +76,7 @@
 @@||my.tealiumiq.com^
 @@||netatmo.commander1.com^
 @@||news.warhammer.com^
+@@||nordspam.com^
 @@||oa.tr.line.me^
 @@||obituaries.therecord.com^
 @@||obituaries.thestar.com^
@@ -92,6 +98,8 @@
 @@||redir.ownpage.fr^
 @@||remembering.ca^
 @@||res.ads.nicovideo.jp^
+@@||routerlogin.com^
+@@||routerlogin.net^
 @@||s.bluecore.com^
 @@||sax.sina.com.cn^
 @@||sdkapi.sms.mob.com^
@@ -99,6 +107,8 @@
 @@||sedge.nfl.com^
 @@||skydrivesync.policies.live.net^
 @@||smtp.focusgroupresearch.com^
+@@||spameatingmonkey.net^
+@@||spamrats.com^
 @@||ssai.aniview.com^
 @@||stash.roistat.com^
 @@||str.hit.gemius.pl^
@@ -111,6 +121,9 @@
 @@||tlh.gedidigital.it^
 @@||tms.capitalone.com^
 @@||torimochi.line-apps.com^
+@@||tplinkap.net^
+@@||tplinkrepeater.net^
+@@||tplinkwifi.net^
 @@||tr.rdrtr.com^
 @@||track.rutarget.ru^
 @@||trk.ecomm.lenovo.com^
