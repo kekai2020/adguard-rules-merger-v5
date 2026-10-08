@@ -1,8 +1,7 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe)
-! Count: 200
-! Generated: 2026-10-07T03:33:05.652043+00:00
+! Count: 199
+! Generated: 2026-10-08T03:47:07.149237+00:00
 @@||a.sellpoint.net^
-@@||ac.ebis.ne.jp^
 @@||acs-m.daraz.com.bd^
 @@||acs-m.daraz.pk^
 @@||action.metaffiliation.com^
@@ -55,7 +54,6 @@
 @@||click.simba.taobao.com^
 @@||click.trafficguard.ai^
 @@||click.virt.exacttarget.com^
-@@||cloud.notification-naviextras.com^
 @@||cm-beacon.nakanohito.jp^
 @@||cm-widget.nakanohito.jp^
 @@||cmp.inmobi.com^
@@ -169,6 +167,7 @@
 @@||spamrats.com^
 @@||ssai.aniview.com^
 @@||stash.roistat.com^
+@@||stat.jseea.cn^
 @@||statcounter.com^
 @@||stats.uptimerobot.com^
 @@||storage.live.com^

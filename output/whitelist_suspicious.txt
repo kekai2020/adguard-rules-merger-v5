@@ -1,10 +1,11 @@
 ! Title: AdGuard Rules Merger — Whitelist (suspicious)
-! Count: 39
-! Generated: 2026-10-07T03:33:05.652309+00:00
+! Count: 40
+! Generated: 2026-10-08T03:47:07.149503+00:00
 @@||5471782.fls.doubleclick.net^
 @@||79423.analytics.edgekey.net^
 @@||a.adwolf.ru^
 @@||aax-fe.amazon.co.jp^
+@@||ac.ebis.ne.jp^
 @@||ad.10010.com^
 @@||ad.cityu.edu.hk^
 @@||ads.tdbank.com^
@@ -13,6 +14,7 @@
 @@||avts.mcafee.com^
 @@||bl.spamcop.net^
 @@||clickattr.wayup.com^
+@@||cloud.notification-naviextras.com^
 @@||dishy.starlink.com^
 @@||dns.msftncsi.com^
 @@||edge-enterprise.activity.windows.com^
@@ -37,6 +39,5 @@
 @@||s.mvconf.f.360.cn^
 @@||speedport.ip^
 @@||sponsor.nitropay.com^
-@@||stat.jseea.cn^
 @@||thumbnail.thench.net^
 @@||tlaol.com^
