@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (unknown)
 ! Count: 30
-! Generated: 2026-10-08T03:47:07.149685+00:00
+! Generated: 2026-10-09T03:52:41.545586+00:00
 @@||3gppnetwork.org^
 @@||ad.abchina.com^
 @@||ad.azure.com^

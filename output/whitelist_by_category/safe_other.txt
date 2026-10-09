@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 其他)
 ! Count: 130
-! Generated: 2026-10-08T03:47:07.151224+00:00
+! Generated: 2026-10-09T03:52:41.547152+00:00
 @@||a.sellpoint.net^
 @@||acs-m.daraz.com.bd^
 @@||acs-m.daraz.pk^
@@ -107,6 +107,7 @@
 @@||smtp.focusgroupresearch.com^
 @@||spameatingmonkey.net^
 @@||spamrats.com^
+@@||spartaindependent.com^
 @@||ssai.aniview.com^
 @@||stash.roistat.com^
 @@||str.hit.gemius.pl^
@@ -123,7 +124,6 @@
 @@||tplinkrepeater.net^
 @@||tplinkwifi.net^
 @@||tr.rdrtr.com^
-@@||track.rutarget.ru^
 @@||trk.ecomm.lenovo.com^
 @@||unsubscribe.lhinsights.com^
 @@||used.ca^

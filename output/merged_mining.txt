@@ -1,7 +1,7 @@
 ! Title: Merged mining filter (V5)
 ! Category: mining
-! Version: af74338e907d
-! Rules: 171
+! Version: f4847aebc9b1
+! Rules: 173
 !
 ||1q2w3.fun^
 ||aeros01.tk^
@@ -103,11 +103,13 @@
 ||jshosting.party^
 ||jshosting.win^
 ||jurty.ml^
+||laserveradedomaina.com^
 ||ledhenone.com^
 ||lolopool.com^
 ||losital.ru^
 ||machieved.com^
 ||mebablo.com^
+||megabanners.cf^
 ||mi-de-ner-nis3.info^
 ||minemytraffic.com^
 ||minerad.com^
@@ -132,13 +134,13 @@
 ||ninaning.com^
 ||npcdn1.now.sh^
 ||nvidia-graphics.top^
+||offerreality.com^
 ||okeyletsgo.ml^
 ||panelsave.com^
 ||panger-top.click^
 ||papoto.com^
 ||party-vqgdyvoycc.now.sh^
 ||pearno.com^
-||pebx.pl^
 ||pema.cl^
 ||pr0gram.org^
 ||proofly.win^
