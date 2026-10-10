@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 联盟营销/跳转)
-! Count: 20
-! Generated: 2026-10-09T03:52:41.546524+00:00
+! Count: 21
+! Generated: 2026-10-10T03:36:26.641286+00:00
 @@||awin1.com^
 @@||click.appcast.io^
 @@||click.avs.io^
@@ -14,6 +14,7 @@
 @@||link.morningbrew.com^
 @@||link.nzz.ch^
 @@||link.sylikes.com^
+@@||links.e.theatlantic.com^
 @@||links.getblueshift.com^
 @@||partner.everydays.de^
 @@||partner.o2online.de^

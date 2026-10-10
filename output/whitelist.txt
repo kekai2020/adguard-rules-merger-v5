@@ -1,7 +1,7 @@
 ! Title: Whitelist for Merged Rules (V5)
 ! Description: Allow rules separated from main filter
 ! Version: 9c9e33d49f0d
-! Generated: 2026-10-09T03:52:39.494002+00:00
+! Generated: 2026-10-10T03:36:24.260861+00:00
 ! Total allow rules: 271
 !
 @@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/

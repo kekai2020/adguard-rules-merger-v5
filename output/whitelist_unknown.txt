@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (unknown)
-! Count: 30
-! Generated: 2026-10-09T03:52:41.545586+00:00
+! Count: 31
+! Generated: 2026-10-10T03:36:26.639375+00:00
 @@||3gppnetwork.org^
 @@||ad.abchina.com^
 @@||ad.azure.com^
@@ -10,6 +10,7 @@
 @@||b.barracudacentral.org^
 @@||bl.blocklist.de^
 @@||buyad.bi-xenon.cn^
+@@||cloud.notification-naviextras.com^
 @@||datadoghq-browser-agent.com^
 @@||direct.quickconnect.to^
 @@||dnsbl.dronebl.org^

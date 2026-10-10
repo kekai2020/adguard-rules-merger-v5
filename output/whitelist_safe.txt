@@ -1,7 +1,8 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe)
-! Count: 198
-! Generated: 2026-10-09T03:52:41.545138+00:00
+! Count: 207
+! Generated: 2026-10-10T03:36:26.638649+00:00
 @@||a.sellpoint.net^
+@@||ac.ebis.ne.jp^
 @@||acs-m.daraz.com.bd^
 @@||acs-m.daraz.pk^
 @@||action.metaffiliation.com^
@@ -35,6 +36,7 @@
 @@||backscatterer.org^
 @@||baozhang.baidu.com^
 @@||belgium.wolterskluwer.com^
+@@||bl.spamcop.net^
 @@||c.office.com^
 @@||captcha.su.baidu.com^
 @@||catchup.thisisdax.com^
@@ -54,6 +56,7 @@
 @@||click.simba.taobao.com^
 @@||click.trafficguard.ai^
 @@||click.virt.exacttarget.com^
+@@||clickattr.wayup.com^
 @@||cm-beacon.nakanohito.jp^
 @@||cm-widget.nakanohito.jp^
 @@||cmp.inmobi.com^
@@ -112,10 +115,12 @@
 @@||link.nzz.ch^
 @@||link.sylikes.com^
 @@||linka.page^
+@@||links.e.theatlantic.com^
 @@||links.getblueshift.com^
 @@||log.mmstat.com^
 @@||logentries.com^
 @@||login.sendpulse.com^
+@@||ma135-r.analytics.edgekey.net^
 @@||marketing.net.idealo-partner.com^
 @@||media-consumer365.desigual.com^
 @@||my.tealiumiq.com^
@@ -129,6 +134,7 @@
 @@||obituaries.toacorn.com^
 @@||official.paymaya.com^
 @@||om-ssl.consorsbank.de^
+@@||omniture.walmart.com^
 @@||omsc.kpn.com^
 @@||oneline.nextday.media^
 @@||pagead.l.doubleclick.net^
@@ -138,6 +144,7 @@
 @@||prod.impartner.live^
 @@||promo.gramedia.com^
 @@||proto2ad.durasite.net^
+@@||psbl.surriel.com^
 @@||public-cis.exponea.com^
 @@||puzzles-games-api.gp-prod.conde.digital^
 @@||px.a8.net^
@@ -168,6 +175,7 @@
 @@||spartaindependent.com^
 @@||ssai.aniview.com^
 @@||stash.roistat.com^
+@@||stat.jseea.cn^
 @@||statcounter.com^
 @@||stats.uptimerobot.com^
 @@||storage.live.com^
@@ -187,6 +195,7 @@
 @@||tplinkrepeater.net^
 @@||tplinkwifi.net^
 @@||tr.rdrtr.com^
+@@||track.rutarget.ru^
 @@||track.webgains.com^
 @@||tracker.eu.org^
 @@||trk.ecomm.lenovo.com^
