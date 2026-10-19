@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 其他)
-! Count: 134
-! Generated: 2026-10-10T03:36:26.642463+00:00
+! Count: 140
+! Generated: 2026-10-19T02:36:41.938560+00:00
 @@||a.sellpoint.net^
 @@||ac.ebis.ne.jp^
 @@||acs-m.daraz.com.bd^
@@ -13,6 +13,7 @@
 @@||afi-b.com^
 @@||analysis.chess.com^
 @@||anwb.webpower.eu^
+@@||ap01.records.in.treasuredata.com^
 @@||api.ads.tvb.com^
 @@||api.docodoco.jp^
 @@||api.huangye.miui.com^
@@ -56,7 +57,9 @@
 @@||ftp.bmp.ovh^
 @@||gate.first-id.fr^
 @@||get.neofinancial.com^
+@@||grp07.ias.rakuten.co.jp^
 @@||hash.cymru.com^
+@@||hb.afl.rakuten.co.jp^
 @@||health.halodoc.com^
 @@||hidive.com^
 @@||home.focusatwill.com^
@@ -75,6 +78,7 @@
 @@||media-consumer365.desigual.com^
 @@||my.tealiumiq.com^
 @@||netatmo.commander1.com^
+@@||news-app.abumedia.yql.yahoo.com^
 @@||news.warhammer.com^
 @@||nordspam.com^
 @@||oa.tr.line.me^
@@ -90,6 +94,7 @@
 @@||promo.gramedia.com^
 @@||proto2ad.durasite.net^
 @@||psbl.surriel.com^
+@@||pt.afl.rakuten.co.jp^
 @@||public-cis.exponea.com^
 @@||puzzles-games-api.gp-prod.conde.digital^
 @@||px.a8.net^
@@ -102,6 +107,7 @@
 @@||routerlogin.com^
 @@||routerlogin.net^
 @@||s.bluecore.com^
+@@||s.mvconf.f.360.cn^
 @@||sax.sina.com.cn^
 @@||sdkapi.sms.mob.com^
 @@||secureimage.securedataimages.com^

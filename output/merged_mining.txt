@@ -1,7 +1,7 @@
 ! Title: Merged mining filter (V5)
 ! Category: mining
-! Version: 460f0108982a
-! Rules: 172
+! Version: fa2bf32f4ca7
+! Rules: 168
 !
 ||1q2w3.fun^
 ||aeros01.tk^
@@ -23,6 +23,7 @@
 ||berateveng.ru^
 ||besti.ga^
 ||bestmobiworld.com^
+||bestsrv.de^
 ||bewaslac.com^
 ||biberukalap.com^
 ||bitcoin-cashcard.de^
@@ -79,7 +80,6 @@
 ||g1thub.com^
 ||gasolina.ml^
 ||gay-hotvideo.net^
-||goldoffer.online^
 ||gxbrowser.net^
 ||hhb123.tk^
 ||hide.ovh^
@@ -101,7 +101,6 @@
 ||jscdndel.com^
 ||jshosting.party^
 ||jshosting.win^
-||jurty.ml^
 ||laserveradedomaina.com^
 ||ledhenone.com^
 ||lolopool.com^
@@ -111,7 +110,6 @@
 ||megabanners.cf^
 ||mi-de-ner-nis3.info^
 ||minemytraffic.com^
-||minerad.com^
 ||minero-proxy-01.now.sh^
 ||minero-proxy-02.now.sh^
 ||minero-proxy-03.now.sh^
@@ -139,7 +137,6 @@
 ||panger-top.click^
 ||papoto.com^
 ||party-vqgdyvoycc.now.sh^
-||pearno.com^
 ||pema.cl^
 ||pr0gram.org^
 ||proofly.win^
@@ -160,7 +157,6 @@
 ||sxcdn4.now.sh^
 ||sxcdn5.herokuapp.com^
 ||sxcdn6.now.sh^
-||terorie.com^
 ||thewhizmarketing.com^
 ||to-support.me^
 ||uoldid.ru^

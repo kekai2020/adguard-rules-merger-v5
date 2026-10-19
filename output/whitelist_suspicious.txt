@@ -1,16 +1,12 @@
 ! Title: AdGuard Rules Merger — Whitelist (suspicious)
-! Count: 32
-! Generated: 2026-10-10T03:36:26.638977+00:00
-@@||5471782.fls.doubleclick.net^
-@@||79423.analytics.edgekey.net^
+! Count: 23
+! Generated: 2026-10-19T02:36:41.936817+00:00
 @@||a.adwolf.ru^
-@@||aax-fe.amazon.co.jp^
-@@||ad.10010.com^
 @@||ad.cityu.edu.hk^
 @@||ads.tdbank.com^
-@@||ap01.records.in.treasuredata.com^
 @@||avqs.mcafee.com^
 @@||avts.mcafee.com^
+@@||cloud.notification-naviextras.com^
 @@||dishy.starlink.com^
 @@||dns.msftncsi.com^
 @@||edge-enterprise.activity.windows.com^
@@ -20,15 +16,10 @@
 @@||fritz.powerline^
 @@||fritz.repeater^
 @@||fritz.smartgateway^
-@@||grp07.ias.rakuten.co.jp^
 @@||guce.advertising.com^
-@@||hb.afl.rakuten.co.jp^
 @@||meizu.coapi.moji.com^
-@@||news-app.abumedia.yql.yahoo.com^
 @@||plex.direct^
-@@||pt.afl.rakuten.co.jp^
 @@||router.asus.com^
-@@||s.mvconf.f.360.cn^
 @@||speedport.ip^
 @@||sponsor.nitropay.com^
 @@||thumbnail.thench.net^
