@@ -1,7 +1,7 @@
 ! Title: Merged mining filter (V5)
 ! Category: mining
-! Version: fa2bf32f4ca7
-! Rules: 168
+! Version: 0bcc71e466e9
+! Rules: 169
 !
 ||1q2w3.fun^
 ||aeros01.tk^
@@ -137,6 +137,7 @@
 ||panger-top.click^
 ||papoto.com^
 ||party-vqgdyvoycc.now.sh^
+||pearno.com^
 ||pema.cl^
 ||pr0gram.org^
 ||proofly.win^

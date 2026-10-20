@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 联盟营销/跳转)
 ! Count: 22
-! Generated: 2026-10-19T02:36:41.937915+00:00
+! Generated: 2026-10-20T02:49:26.105018+00:00
 @@||aax-fe.amazon.co.jp^
 @@||awin1.com^
 @@||click.appcast.io^

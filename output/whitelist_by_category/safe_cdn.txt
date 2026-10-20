@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / CDN/基础设施)
 ! Count: 8
-! Generated: 2026-10-19T02:36:41.937575+00:00
+! Generated: 2026-10-20T02:49:26.104597+00:00
 @@||79423.analytics.edgekey.net^
 @@||cdn.atmedia.hu^
 @@||cdn.duurzaam.greenchoice.nl^
