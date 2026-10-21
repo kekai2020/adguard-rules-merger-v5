@@ -1,7 +1,7 @@
 ! Title: Merged mining filter (V5)
 ! Category: mining
-! Version: 0bcc71e466e9
-! Rules: 169
+! Version: f705c3be931d
+! Rules: 165
 !
 ||1q2w3.fun^
 ||aeros01.tk^
@@ -36,7 +36,6 @@
 ||bmnr.pw^
 ||bmst.pw^
 ||brominer.com^
-||browsermine.com^
 ||cfcdist.loan^
 ||clgserv.pro^
 ||cloud-miner.de^
@@ -137,17 +136,14 @@
 ||panger-top.click^
 ||papoto.com^
 ||party-vqgdyvoycc.now.sh^
-||pearno.com^
 ||pema.cl^
 ||pr0gram.org^
 ||proofly.win^
 ||rand.com.ru^
 ||renhertfo.com^
 ||roastedvolt.net^
-||rocks.io^
 ||scaleway.ovh^
 ||service4refresh.info^
-||sparechange.io^
 ||staticsfs.host^
 ||statistic.date^
 ||stonecalcom.com^
