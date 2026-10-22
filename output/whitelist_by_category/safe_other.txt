@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe / 其他)
-! Count: 141
-! Generated: 2026-10-21T02:42:51.549129+00:00
+! Count: 140
+! Generated: 2026-10-22T02:40:28.822782+00:00
 @@||a.sellpoint.net^
 @@||ac.ebis.ne.jp^
 @@||acs-m.daraz.com.bd^
@@ -108,7 +108,6 @@
 @@||routerlogin.com^
 @@||routerlogin.net^
 @@||s.bluecore.com^
-@@||s.mvconf.f.360.cn^
 @@||sax.sina.com.cn^
 @@||sdkapi.sms.mob.com^
 @@||secureimage.securedataimages.com^

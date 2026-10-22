@@ -18,36 +18,6 @@
     "conflict_type": "exact"
   },
   {
-    "domain": "proto2ad.durasite.net",
-    "blocked_rule": "||proto2ad.durasite.net^",
-    "blocked_category": "ads",
-    "blocked_sources": [
-      "AdGuard DNS filter",
-      "CHN: anti-AD",
-      "CHN: AdRules DNS List",
-      "HaGeZi's Ultimate Blocklist",
-      "OISD Blocklist Small"
-    ],
-    "whitelist_rule": "@@||proto2ad.durasite.net^",
-    "whitelist_sources": [
-      "AdGuard DNS filter"
-    ],
-    "conflict_type": "exact"
-  },
-  {
-    "domain": "supportmalerschwab.direct.quickconnect.to",
-    "blocked_rule": "||supportmalerschwab.direct.quickconnect.to^",
-    "blocked_category": "phishing",
-    "blocked_sources": [
-      "Phishing Army"
-    ],
-    "whitelist_rule": "@@||direct.quickconnect.to^",
-    "whitelist_sources": [
-      "HaGeZi's DNS Rebind Protection"
-    ],
-    "conflict_type": "cascade"
-  },
-  {
     "domain": "afi-b.com",
     "blocked_rule": "||afi-b.com^",
     "blocked_category": "ads",
@@ -149,6 +119,23 @@
       "HaGeZi's Ultimate Blocklist"
     ],
     "whitelist_rule": "@@||datadoghq-browser-agent.com^",
+    "whitelist_sources": [
+      "AdGuard DNS filter"
+    ],
+    "conflict_type": "exact"
+  },
+  {
+    "domain": "proto2ad.durasite.net",
+    "blocked_rule": "||proto2ad.durasite.net^",
+    "blocked_category": "ads",
+    "blocked_sources": [
+      "AdGuard DNS filter",
+      "CHN: anti-AD",
+      "CHN: AdRules DNS List",
+      "HaGeZi's Ultimate Blocklist",
+      "OISD Blocklist Small"
+    ],
+    "whitelist_rule": "@@||proto2ad.durasite.net^",
     "whitelist_sources": [
       "AdGuard DNS filter"
     ],
@@ -352,8 +339,7 @@
     "blocked_category": "ads",
     "blocked_sources": [
       "AdGuard DNS filter",
-      "CHN: AdRules DNS List",
-      "HaGeZi's Ultimate Blocklist"
+      "CHN: AdRules DNS List"
     ],
     "whitelist_rule": "@@||omniture.walmart.com^",
     "whitelist_sources": [
