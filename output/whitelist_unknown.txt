@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (unknown)
-! Count: 32
-! Generated: 2026-10-22T02:40:28.821150+00:00
+! Count: 31
+! Generated: 2026-10-23T02:45:30.953706+00:00
 @@||3gppnetwork.org^
 @@||ad.10010.com^
 @@||ad.abchina.com^
@@ -24,7 +24,6 @@
 @@||msftconnecttest.com^
 @@||myunraid.net^
 @@||redir.tradedoubler.com^
-@@||s.mvconf.f.360.cn^
 @@||sophosxl.net^
 @@||stats.gov.cn^
 @@||tongji.cn^
