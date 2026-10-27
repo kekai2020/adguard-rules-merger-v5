@@ -1,22 +1,5 @@
 [
   {
-    "domain": "proto2ad.durasite.net",
-    "blocked_rule": "||proto2ad.durasite.net^",
-    "blocked_category": "ads",
-    "blocked_sources": [
-      "AdGuard DNS filter",
-      "CHN: anti-AD",
-      "CHN: AdRules DNS List",
-      "HaGeZi's Ultimate Blocklist",
-      "OISD Blocklist Small"
-    ],
-    "whitelist_rule": "@@||proto2ad.durasite.net^",
-    "whitelist_sources": [
-      "AdGuard DNS filter"
-    ],
-    "conflict_type": "exact"
-  },
-  {
     "domain": "googleadservices.com",
     "blocked_rule": "||googleadservices.com^",
     "blocked_category": "ads",
@@ -29,6 +12,23 @@
       "AWAvenue Ads Rule"
     ],
     "whitelist_rule": "@@||googleadservices.com^",
+    "whitelist_sources": [
+      "AdGuard DNS filter"
+    ],
+    "conflict_type": "exact"
+  },
+  {
+    "domain": "proto2ad.durasite.net",
+    "blocked_rule": "||proto2ad.durasite.net^",
+    "blocked_category": "ads",
+    "blocked_sources": [
+      "AdGuard DNS filter",
+      "CHN: anti-AD",
+      "CHN: AdRules DNS List",
+      "HaGeZi's Ultimate Blocklist",
+      "OISD Blocklist Small"
+    ],
+    "whitelist_rule": "@@||proto2ad.durasite.net^",
     "whitelist_sources": [
       "AdGuard DNS filter"
     ],
@@ -376,30 +376,13 @@
     "conflict_type": "exact"
   },
   {
-    "domain": "ad.10010.com",
-    "blocked_rule": "||ad.10010.com^",
+    "domain": "aax-fe.amazon.co.jp",
+    "blocked_rule": "||aax-fe.amazon.co.jp^",
     "blocked_category": "ads",
     "blocked_sources": [
-      "CHN: anti-AD",
-      "CHN: AdRules DNS List",
-      "HaGeZi's Ultimate Blocklist",
-      "OISD Blocklist Small",
-      "AWAvenue Ads Rule"
+      "HaGeZi's Ultimate Blocklist"
     ],
-    "whitelist_rule": "@@||ad.10010.com^",
-    "whitelist_sources": [
-      "AdGuard DNS filter"
-    ],
-    "conflict_type": "exact"
-  },
-  {
-    "domain": "ad.ourgame.com",
-    "blocked_rule": "||ad.ourgame.com^",
-    "blocked_category": "ads",
-    "blocked_sources": [
-      "CHN: AdRules DNS List"
-    ],
-    "whitelist_rule": "@@||ad.ourgame.com^",
+    "whitelist_rule": "@@||aax-fe.amazon.co.jp^",
     "whitelist_sources": [
       "AdGuard DNS filter"
     ],
@@ -417,19 +400,6 @@
       "OISD Blocklist Small"
     ],
     "whitelist_rule": "@@||sax.sina.com.cn^",
-    "whitelist_sources": [
-      "AdGuard DNS filter"
-    ],
-    "conflict_type": "exact"
-  },
-  {
-    "domain": "aax-fe.amazon.co.jp",
-    "blocked_rule": "||aax-fe.amazon.co.jp^",
-    "blocked_category": "ads",
-    "blocked_sources": [
-      "HaGeZi's Ultimate Blocklist"
-    ],
-    "whitelist_rule": "@@||aax-fe.amazon.co.jp^",
     "whitelist_sources": [
       "AdGuard DNS filter"
     ],
@@ -501,16 +471,33 @@
     "conflict_type": "exact"
   },
   {
-    "domain": "slm501y93viprep.dxcloud.episerver.net",
-    "blocked_rule": "||slm501y93viprep.dxcloud.episerver.net^",
-    "blocked_category": "malware",
+    "domain": "ad.10010.com",
+    "blocked_rule": "||ad.10010.com^",
+    "blocked_category": "ads",
     "blocked_sources": [
-      "HaGeZi's Threat Intelligence Feeds"
+      "CHN: anti-AD",
+      "CHN: AdRules DNS List",
+      "HaGeZi's Ultimate Blocklist",
+      "OISD Blocklist Small",
+      "AWAvenue Ads Rule"
     ],
-    "whitelist_rule": "@@||dxcloud.episerver.net^",
+    "whitelist_rule": "@@||ad.10010.com^",
     "whitelist_sources": [
-      "CHN: anti-AD"
+      "AdGuard DNS filter"
     ],
-    "conflict_type": "cascade"
+    "conflict_type": "exact"
+  },
+  {
+    "domain": "ad.ourgame.com",
+    "blocked_rule": "||ad.ourgame.com^",
+    "blocked_category": "ads",
+    "blocked_sources": [
+      "CHN: AdRules DNS List"
+    ],
+    "whitelist_rule": "@@||ad.ourgame.com^",
+    "whitelist_sources": [
+      "AdGuard DNS filter"
+    ],
+    "conflict_type": "exact"
   }
 ]
