@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (suspicious)
 ! Count: 23
-! Generated: 2026-10-27T03:06:18.502630+00:00
+! Generated: 2026-10-28T03:19:20.808415+00:00
 @@||a.adwolf.ru^
 @@||ad.cityu.edu.hk^
 @@||ads.tdbank.com^

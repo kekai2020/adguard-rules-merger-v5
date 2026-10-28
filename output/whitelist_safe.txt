@@ -1,6 +1,6 @@
 ! Title: AdGuard Rules Merger — Whitelist (safe)
-! Count: 217
-! Generated: 2026-10-27T03:06:18.502347+00:00
+! Count: 216
+! Generated: 2026-10-28T03:19:20.808194+00:00
 @@||5471782.fls.doubleclick.net^
 @@||79423.analytics.edgekey.net^
 @@||a.sellpoint.net^
@@ -197,7 +197,6 @@
 @@||swasc.homedepot.com^
 @@||tags.crwdcntrl.net^
 @@||taiga.maven.io^
-@@||tj.gov.cn^
 @@||tlh.gedidigital.it^
 @@||tms.capitalone.com^
 @@||torimochi.line-apps.com^
