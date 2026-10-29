@@ -1,7 +1,7 @@
 ! Title: Merged mining filter (V5)
 ! Category: mining
-! Version: 1a56a1612bdf
-! Rules: 164
+! Version: c59449cfcdae
+! Rules: 166
 !
 ||1q2w3.fun^
 ||aeros01.tk^
@@ -85,6 +85,7 @@
 ||hostingcloud.racing^
 ||hostingcloud.trade^
 ||hostingcloud.win^
+||icemining.ca^
 ||ijfcm7bu6ocerxsfq56ka3dtdanunyp4ytwk745b54agtravj2wr2qqd.onion.pet^
 ||infura-ipfs.io^
 ||ininmacerad.pro^
@@ -143,6 +144,7 @@
 ||rocks.io^
 ||scaleway.ovh^
 ||service4refresh.info^
+||sparechange.io^
 ||staticsfs.host^
 ||statistic.date^
 ||stonecalcom.com^
